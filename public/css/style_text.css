@@ -1,0 +1,36 @@
+/* Common font styles for the whole site */
+
+p,a {
+	font-family: 'Questrial', sans-serif;
+	font-weight: 300;
+	margin: 0px;
+}
+
+.headerFont{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	margin: 0px;
+}
+
+
+.darkText{ color: #6d6d68; }
+.lightText{ color: #FFFFFF; }
+.grayText{ color: #c2c2b9; }
+.accentText{ color: #7DC7BE; }
+
+.platinumText { color:#E6E8E6; }
+.smokeText { color:#F4F4F6; }
+
+.linkText{ color: #000000; transition: 0.3s; }
+.linkText:hover{ color: #7DC7BE; }
+.linkText:active{ color: #7DC7BE; }
+
+.centerText{ text-align: center; }
+.rightText{ text-align: right; }
+.leftText{ text-align: left; }
+
+.hugeText{   font-size: 35px; line-height: 40px; }
+.bigText{    font-size: 22px; line-height: 30px; }
+.mediumText{ font-size: 18px; line-height: 30px; }
+.smallText{  font-size: 15px; line-height: 22px; }
+.tinyText{   font-size: 13px; line-height: 18px; }

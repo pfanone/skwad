@@ -1,0 +1,193 @@
+body {
+	/*height: 100%;*/
+
+	background-color: #fff;
+	background-image: url('/images/signupbackground.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+ul {
+	-webkit-padding-start:10px;
+}
+
+li {
+	margin-top: 20px;
+}
+
+.navbar-right {
+	margin-right: 0px !important;
+}
+
+.form-horizontal {
+	margin: 2px;
+}
+.form-horizontal .form-group {
+	float: left;
+	margin: 0px;
+}
+.form-horizontal .form-group:not(:first-child) {
+	margin-left: 10px;
+}
+
+.full-form .form-group {
+	width:100%;
+	margin-top: 10px;
+	margin-left: 0px !important;
+}
+
+.form-control {
+	height: 30px;
+	padding: 2px 5px;
+	font-size: 12px;
+}
+
+.btn-login {
+	background-color: #62BBC1;
+	border: 1px solid #62BBC1;
+	padding: 4px 12px;
+	font-size: 14px;
+}
+
+.btn-login:hover {
+	color: #62BBC1;
+	background-color: #F4F4F6;
+}
+
+/* Login stuff */
+.loginClose{
+	position: absolute;
+	right:10px;
+	top:10px;
+	height:30px;
+	width:30px;
+	background-image:url('/images/login_close.png');
+	background-size: 100% 100%;
+}
+
+.loginLogo{
+	position: absolute;
+	left:50%;
+	width:300px;
+	margin-left:-150px;
+	top:50%;
+	margin-top: -150px;
+	height:100px;
+	background-image: url('/images/logo.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+.login_overlay {
+	height: 100%;
+
+	background-color: rgba(57,61,63,0.95);
+}
+
+.login_button {
+	height:40px;
+
+	text-align: center;
+
+	font-size: 13px;
+	line-height: 22px;
+
+	text-decoration: none;
+
+	padding:10px;
+	border-radius: 2px;
+	transition: background-color 0.3s;
+}
+.login_button:hover {
+	text-decoration: none;
+}
+
+.login_button_large {
+	width:30px;
+	height: 30px;
+
+	margin-top: 2px;
+
+	padding-top: 5px!important;
+
+}
+
+.login_button_large > i {
+	margin-top: 5px;
+}
+
+.facebookLogin{
+	color: #FFFFFF;
+
+	background-color: #3B5998;
+}
+.facebookLogin:hover{
+	color:#fff;
+	background-color: #7486AA;
+}
+
+.emailLogin{
+	color: #fff;
+	background-color: #4FC16A;
+}
+.emailLogin:hover{
+	color:#fff;
+	background-color: #D4D4D4;
+}
+
+.checkEmailText{
+	position: relative;
+	width:100%;
+	top:50%;
+}
+
+
+.emailForm{
+	width: 200px;
+	margin-top:100px;
+	/*height:40px;*/
+	margin-left:-100px;
+	padding-left:10px;
+	padding-right:10px;
+	border: none;
+	padding-top:0px;
+	padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	transition: border 0.3s;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+input.emailForm:focus {
+	outline-width: 0;
+}
+.emailForm:hover,
+.emailForm:focus{
+	border: 1px solid rgba(0,0,0,0.7);
+}
+
+.emailSubmit{
+	position: absolute;
+	width: 200px;
+	top:190px;
+	margin-top:150px;
+	height:40px;
+	left:50%;
+	margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.emailSubmit:hover{
+	background-color: #D4D4D4;
+}
+
+.loginModal{
+	position: absolute;
+	width:100%;
+	height:100%;
+}

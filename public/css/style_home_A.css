@@ -1,0 +1,577 @@
+/* This section is for the "Choose a size" part */
+
+.chooseSize{
+	position: relative; 
+	width:100%; height:450px; 
+	background-color: #FFF;
+	text-align: center; /* This is to make the container always centered regardless of width */
+}
+
+.chooseSizeContainer{
+	background-color: #E6E8E6;
+	min-height: 400px;
+	/* Before I had the sizeOption class float left and filling out this parent container, but had problems with animations. */
+	/* Google search "browser reflows" to see why */
+}
+
+.cmToggle{
+	position: absolute;
+	bottom:10px;
+	right:30px;
+	opacity: 0.5;
+	pointer-events: auto;
+}
+.inToggle{
+	position: absolute;
+	bottom:10px;
+	right:61px;
+	opacity: 0.5;
+	pointer-events: auto;
+}
+.slashForUnitToggle{
+	position: absolute;
+	bottom:10px;
+	right:52px;
+	opacity: 0.5;
+}
+
+.section-header {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: #131200;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.sizeOption{
+	/*margin-right: 30px; not necessary if not floating left */
+	height: 240px;
+	width: 100%;
+	background-color: #123;
+	background-size: cover;
+	opacity: 1;
+	transition: 0.5s;
+	display: inline-block;
+}
+
+.sizeOptionLink {
+	text-decoration: none;
+}
+
+.initialSO{ /* initial conditions before animation -- this class is removed (and transitioned out of) on page load */
+	opacity: 0;
+	top:80px;
+}
+.sizeOption:hover{
+	top:50px;
+}
+
+.sizeOption:hover .SOUnderline,
+.sizeOption:hover .sizingHelperContainer {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+.size1 {
+	background-image: url('/images/preview_2x2.png');
+}
+.size2 {
+	background-image: url('/images/preview_3x3.png');
+}
+.size3 {
+	background-image: url('/images/preview_4x4.png');
+}
+.size4 {
+	background-image: url('/images/preview_5x2.png');
+}
+
+@media (max-width: 767px) {
+	.size1 {
+		background-position: center;
+	}
+	.size2 {
+		background-position: bottom;
+	}
+	.size3 {
+		background-position: bottom;
+	}
+	.size4 {
+		background-position: top;
+	}
+}
+
+.sizingHelperContainer{
+	width:100%; height:100%;
+	background-color: rgba(255,255,255,0.9);
+	opacity: 0;
+}
+
+.hoverFadeSingleSize{
+	position: absolute; width:100%; height:100%; left:0; top:0;
+	opacity: 0.2;
+	transition: opacity 0.3s;
+}
+.hoverFadeSingleSize:hover{ opacity: 1; }
+
+
+.sizers{
+	border: 2px solid black;
+}
+
+.sizer1 {
+	width:60px;
+	height:60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+.sizer2 {
+	width:90px;
+	height:90px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 57px;
+}
+.sizer3 {
+	width:120px;
+	height:120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+}
+.sizer4 {
+	width:150px;
+	height:60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+
+.sizerText{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.SOUnderline{
+	margin-top:30px;
+	width:100%;
+	height:4px;
+	background-color: #62BBC1;
+	opacity: 0;
+}
+
+.sizeTextDetail {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	min-height: 20px;
+}
+
+.view_previous_arrow {
+	transform: rotate(180deg);
+	width: 100%;
+	height: 10px;
+	margin-top: 3px;
+}
+
+/* This section is for the "Previous Designs" part */
+
+.previousDesigns{
+	position: relative; 
+	width:100%; 
+	background-color: #F7F7F7;
+	text-align: center; /* This is to make the container always centered regardless of width */
+}
+
+.previousDesignsContainer{
+	position: relative;
+	display: inline-block; /* This is to make the container always centered regardless of width */
+	top:40px;
+	min-height:200px;
+	width:900px;
+	margin-bottom:40px;
+	/*background-color: #ABC;*/
+}
+
+.previous_design_container {
+	height: 280px;
+	height: 280px;
+	margin: 10px;
+
+	position: relative;
+
+	background-color: #FFF;
+	border: 1px solid #E6E8E6;
+
+	transition: 0.5s;
+
+	/*-webkit-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+       -moz-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+            box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);*/
+}
+
+/*.previous_design_container:hover .previous_design {
+	transition: 0.5s;
+	-webkit-transform: scale(0.7);
+		-ms-transform: scale(0.7);
+			transform: scale(0.7);
+
+	transform: translateY(-10);
+}*/
+
+.previous_design_container h4 {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width:100%;
+	margin-top: 18px;
+}
+
+.previous_design {
+	height: 278px;
+	width:	280px;
+	max-width: 100%;
+
+	display: inline-block;
+
+	background-color: #FFF;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.action_buttons {
+	position: absolute;
+	opacity:0;
+	transition: 0.5s;
+}
+
+.action_buttons_main {
+	top:    0px;
+	left:   0px;
+	right:  0px;
+	bottom: 0px;
+
+	background-color: rgba(230,232,230,0.8);
+}
+
+.action_buttons_delete {
+	top:   0px;
+	right: 0px;
+
+	height: 35px;
+	width:  35px;
+
+	z-index: 10;
+}
+
+.design_label {
+	top:  10px;
+	left: 0px;
+
+	height: 35px;
+	width:  100%;
+
+	overflow: hidden;
+
+	text-align: center;
+}
+
+.design_label > p {
+	width: 70%;
+
+	margin: auto;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.design_size {
+	bottom: 10px;
+	left:   0px;
+
+	height: 20px;
+	width:  100%;
+
+	overflow: hidden;
+
+	text-align: center;
+}
+
+.design_size > p {
+	width: 50%;
+
+	margin: auto;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.previous_design_container:hover .action_buttons {
+	opacity:1;
+}
+
+.ignoreSpacing{ margin-right: 0px; } /* The order of this is important... must be below in css .previousDesign and .sizeOption */
+
+.linkCursor{cursor: pointer; cursor: hand;}
+.ignoreCursor{pointer-events: none;}
+
+
+.design_buttons {
+	width: 40%;
+
+	padding: 8px 5px;
+	border-radius: 2px;
+
+	position: absolute;
+	left: 30%;
+
+	transition: background-color 0.3s;
+}
+
+a.design_buttons:hover {
+	text-decoration: none;
+}
+
+.deleteDesign{
+	width: 100%;
+	height: 100%;
+
+	left: 0px;
+
+	color: #393D3F;
+}
+.deleteDesign:hover{
+	color: rgba(231,76,60,0.8);
+}
+.deleteIcon {
+	width:  100%;
+	height: 100%;
+
+	background-image: url('/images/toolbar-icons/Trash-Icon(grey).svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.action_buttons_delete:hover > .deleteDesign > .deleteIcon {
+	background-image: url('/images/toolbar-icons/Trash-Icon-red.svg');
+}
+
+.editDesign {
+	color: #F4F4F6;
+	font-weight: bold;
+
+	top: 70px;
+
+	background-color: #393D3F;
+	border: 1px solid #393D3F;
+}
+.editDesign:hover{
+	color: #131200;
+	background-color: #F4F4F6;
+}
+.editText {
+	float: left;
+	margin-left: 5px;
+}
+.editIcon {
+	width:  30px;
+	height: 15px;
+
+	float: left;
+
+	margin-top: 3px;
+    margin-left: 17px;
+
+	background-image: url('/images/toolbar-icons/Draw-Icon.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.editDesign:hover > .editIcon {
+	background-image: url('/images/toolbar-icons/Draw-Icon-(grey).svg')!important;
+}
+
+.previewDesign{
+	color: #F4F4F6;
+
+	top: 115px;
+
+	background-color: #393D3F;
+	border: 1px solid #393D3F;
+}
+.previewDesign:hover{
+	color: #131200;
+	background-color: #F4F4F6;
+}
+.previewText {
+	float: left;
+	margin-left: 5px;
+}
+.previewIcon {
+	width:  20px;
+	height: 15px;
+
+	float: left;
+
+	margin-top: 3px;
+    margin-left: 20px;
+
+	background-image: url('/images/toolbar-icons/Preview-Icon-grey.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.previewDesign:hover > .previewIcon {
+	background-image: url('/images/toolbar-icons/Preview-Icon.svg')!important;
+}
+
+.buyDesign{
+	color: #F4F4F6;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	
+	top: 160px;
+
+	background-color: #62BBC1;
+	border: 1px solid #62BBC1;
+}
+.buyDesign:hover{
+	color: #62BBC1;
+	background-color: #F4F4F6;
+}
+
+
+.noPrevDesignsText{
+	position: relative;
+	width:100%; padding-top:100px;
+}
+
+
+
+.prevDesignsLoading{
+	width:100%;
+	height: 300px;
+	/*background-image: url('images/canvas_loading.gif');*/
+	background-position: center;
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+
+	opacity: 0.8;
+}
+
+/* Loading indicator */
+
+.sk-folding-cube {
+  top:50%; left:50%;
+  margin-top:-25px; margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+		  transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+	  -ms-transform: scale(1.1);
+		  transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7DC7BE;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+		  animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+	  -ms-transform-origin: 100% 100%;
+		  transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+		  transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+		  transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+		  transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+		  animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+		  animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+		  animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+	-webkit-transform: perspective(140px) rotateX(-180deg);
+			transform: perspective(140px) rotateX(-180deg);
+	opacity: 0; 
+  } 25%, 75% {
+	-webkit-transform: perspective(140px) rotateX(0deg);
+			transform: perspective(140px) rotateX(0deg);
+	opacity: 1; 
+  } 90%, 100% {
+	-webkit-transform: perspective(140px) rotateY(180deg);
+			transform: perspective(140px) rotateY(180deg);
+	opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+	-webkit-transform: perspective(140px) rotateX(-180deg);
+			transform: perspective(140px) rotateX(-180deg);
+	opacity: 0; 
+  } 25%, 75% {
+	-webkit-transform: perspective(140px) rotateX(0deg);
+			transform: perspective(140px) rotateX(0deg);
+	opacity: 1; 
+  } 90%, 100% {
+	-webkit-transform: perspective(140px) rotateY(180deg);
+			transform: perspective(140px) rotateY(180deg);
+	opacity: 0; 
+  }
+}
+
+/* End of loading indicator */
+
+
+.blackPreviewOverlay{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 1300;
+}
+.tempHider{
+	opacity: 0;
+}
+
+@media(max-width: 1199px) and (min-width: 992px) {
+	.previewIcon {
+		margin-left: 5px;
+	}
+}

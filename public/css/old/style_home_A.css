@@ -1,0 +1,390 @@
+/* This section is for the "Choose a size" part */
+
+.chooseSize{
+	position: relative; 
+	width:100%; height:450px; 
+	background-color: #FFF;
+	text-align: center; /* This is to make the container always centered regardless of width */
+}
+
+.chooseSizeContainer{
+	position: relative;
+	display: inline-block; /* This is to make the container always centered regardless of width */
+	top:40px; 
+	width:900px; 
+	/* Before I had the sizeOption class float left and filling out this parent container, but had problems with animations. */
+	/* Google search "browser reflows" to see why */
+}
+
+.sizeOption{
+	position: absolute;
+	top:60px; height:280px; width:280px;
+	/*margin-right: 30px; not necessary if not floating left */
+	background-color: #123;
+	background-size: cover;
+	opacity: 1;
+	transition: 0.5s;
+}
+.initialSO{ /* initial conditions before animation -- this class is removed (and transitioned out of) on page load */
+	opacity: 0;
+	top:80px;
+}
+.sizeOption:hover{
+	top:50px;
+}
+
+.size1{   background-image: url('/images/size_2x2.jpg');  left:0px;    }
+.size2{   background-image: url('/images/size_3x3.jpg');  left:310px;  }
+.size3{   background-image: url('/images/size_4x4.jpg');  left:620px;  }
+
+.sizingHelperContainer{
+	position: absolute;
+	left:0px; top:0px; width:100%; height:100%;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.hoverFadeSingleSize{
+	position: absolute; width:100%; height:100%; left:0; top:0;
+	opacity: 0.2;
+	transition: opacity 0.3s;
+}
+.hoverFadeSingleSize:hover{ opacity: 1; }
+
+
+.sizers{
+	position: absolute;
+	left:50%; top:40%;
+	border: 2px solid black;
+}
+
+.sizer1{ width:60px;  margin-left:-30px; height:60px; margin-top:-10px; }
+.sizer2{ width:90px;  margin-left:-45px; height:90px; margin-top:-25px; }
+.sizer3{ width:120px;  margin-left:-60px; height:120px; margin-top:-40px; }
+
+.sizerText{
+	position: absolute;
+	left:50%; margin-left:-60px; width:120px; top:100%; margin-top:10px;
+}
+
+.SOUnderline{
+	position: absolute;
+	left:0px; bottom:-28px; width:100%; height:4px;
+	background-color: #7DC7BE;
+}
+
+
+
+
+.chooseSizeText{
+	position: absolute;
+	left:0; top:0;
+}
+
+.sizeTextDetail{
+	position: absolute;
+	left:0; bottom:-30px;
+}
+
+.customSizeText{
+	position: absolute;
+	right:0; top:0;
+}
+
+
+
+
+
+
+
+
+/* This section is for the "Previous Designs" part */
+
+.previousDesigns{
+	position: relative; 
+	width:100%; 
+	background-color: #F7F7F7;
+	text-align: center; /* This is to make the container always centered regardless of width */
+}
+
+.previousDesignsContainer{
+	position: relative;
+	display: inline-block; /* This is to make the container always centered regardless of width */
+	top:40px; min-height:200px; width:900px;
+	margin-bottom:40px;
+	/*background-color: #ABC;*/
+}
+
+.spacer{
+	position: relative;
+	width: 100%; height: 30px;
+}
+
+.previousDesign{
+	position: relative; float: left;
+	margin-top:30px; height:280px; width:280px;
+	margin-right: 30px; margin-bottom: 30px;
+
+	background-color: #FFF;
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	transition: 0.5s;
+}
+.ignoreSpacing{ margin-right: 0px; } /* The order of this is important... must be below in css .previousDesign and .sizeOption */
+
+.funkyBGEffect{
+	/* no effects -- added in hover below */
+}
+.funkyBGEffect:hover{ background-size: 80% auto; background-position: center 20%; }
+
+.linkCursor{cursor: pointer; cursor: hand;}
+.ignoreCursor{pointer-events: none;}
+
+
+.deleteDesign{
+	position: absolute;
+	width: 70px; bottom:10px; height:40px; right:10px;
+	background-color: #FF0000;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.deleteDesign:hover{ background-color: #CC0000; }
+
+.editDesign{
+	position: absolute;
+	width: 180px; bottom:10px; height:40px; left:10px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.editDesign:hover{ background-color: #F5F5F5; }
+
+.editDesign2{
+	position: absolute;
+	width: 100px; bottom:10px; height:40px; left:10px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.editDesign2:hover{ background-color: #F5F5F5; }
+
+.buyDesign{
+	position: absolute;
+	width: 70px; bottom:10px; height:40px; right:90px;
+	background-color: #7DC7BE;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.buyDesign:hover{ background-color: #ACDBD5; }
+
+
+.noPrevDesignsText{
+	position: relative;
+	width:100%; padding-top:100px;
+}
+
+.checkEmailText{
+	position: relative;
+	width:100%; padding-top:60px;
+}
+
+.loginText{
+	position: relative;
+	width:100%; padding-top:20px;
+}
+
+.facebookLogin{
+	position: absolute;
+	width: 200px; top:90px; height:40px; left:50%; margin-left:-100px;
+	background-color: #3B5998;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.facebookLogin:hover{ background-color: #7486AA; }
+
+.emailLogin{
+	position: absolute;
+	width: 200px; top:140px; height:40px; left:50%; margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.emailLogin:hover{ background-color: #D4D4D4; }
+
+
+
+.logoutModal{
+	position: relative;
+	width: 100%; height: 200px;
+}
+
+.logoutButton{
+	position: absolute;
+	width: 200px; top:80px; height:40px; left:50%; margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.logoutButton:hover{ background-color: #D4D4D4; }
+
+
+
+
+
+
+.emailForm{
+	position: absolute;
+	width: 200px; top:140px; height:40px; left:50%; margin-left:-100px;
+	padding-left:10px; padding-right:10px; border: none;
+	padding-top:0px; padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	transition: border 0.3s;
+
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+input.emailForm:focus {
+    outline-width: 0;
+}
+.emailForm:hover{ border: 1px solid rgba(0,0,0,0.7); }
+.emailForm:focus{ border: 1px solid rgba(0,0,0,0.7); }
+
+.emailSubmit{
+	position: absolute;
+	width: 200px; top:190px; height:40px; left:50%; margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.emailSubmit:hover{ background-color: #D4D4D4; }
+
+
+
+
+
+
+
+
+
+.prevDesignsLoading{
+	position: absolute;
+	width:100%; height: 300px; left:0; top:40px;
+	/*background-image: url('images/canvas_loading.gif');*/
+	background-position: center;
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+
+	opacity: 0.8;
+}
+
+/* Loading indicator */
+
+.sk-folding-cube {
+  top:50%; left:50%;
+  margin-top:-25px; margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7DC7BE;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+
+/* End of loading indicator */
+
+
+
+
+
+
+

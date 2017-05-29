@@ -1,0 +1,204 @@
+/* Tutorial Stuff */
+.tutorialCover{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,0.85);
+	z-index: 1500;
+
+	cursor: pointer;
+}
+
+.tutorialTextContainer{
+	position: absolute;
+	width: 350px;
+	left:  100px;
+	top:   150px;
+
+	text-align: center;
+}
+
+.tutorialHighlight {
+	position: absolute;
+
+	background-color: transparent;
+	border: 2px dashed #62BBC1;
+	border-radius: 4px;
+	border-collapse: collapse;
+}
+
+.tutorialToolbarHighlight {
+	height: 76px;
+
+	top:   48px;
+	left:  352px;
+	right: -5px;
+}
+
+.tutorialLeftMenuHighlight {
+	height: 375px;
+	width:  70px;
+
+	top:  48px;
+	left: -5px;
+}
+
+.tutorialCanvasHighlight {
+	height: 400px;
+	width:  400px;
+
+	top:  25%;
+	left: 500px;
+
+	padding: 15px;
+}
+
+.tutorialInstructionsHighlight {
+	height: 115px;
+	width:  70px;
+
+	bottom: -5px;
+	left:   -5px;
+}
+
+.tutorialCanvasHighlight > .tutorialCanvasHighlightImage {
+	width: 100%;
+	height: 100%;
+
+	background-image: url('/images/CanvasExample.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.tutorialText {
+	position: absolute;
+	color: #f4f4f6;
+}
+
+.tutorialText > h5 {
+	width: 150px;
+	margin-top: 2px;
+}
+
+.tutorialToolbarText {
+	top:   150px;
+	right: 30px;
+}
+
+.tutorialLeftMenuText {
+	top:  50px;
+	left: 80px;
+}
+
+.tutorialCanvasText {
+	top:  35%;
+	left: 300px;
+
+	text-align: right;
+}
+
+.tutorialInstructionsText {
+	left:   80px;
+	bottom: 15px;
+}
+
+.tutorialFocus {
+	z-index: 2000!important;
+}
+
+.tutorialFocus.toolbox_div {
+	position: absolute;
+}
+
+.tutorialFocus.rulerContainer {
+	background-color: #fff;
+}
+
+.tutorialUpArrow,
+.tutorialLeftArrow, 
+.tutorialRightArrow, 
+.tutorialDownArrow
+{
+	width:  30px;
+	height: 30px;
+
+	margin:auto;
+
+	background-image: url('/images/chevron.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.tutorialLeftArrow {
+	-webkit-transform: rotate(270deg);
+	   -moz-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	     -o-transform: rotate(270deg);
+			transform: rotate(270deg);
+}
+
+.tutorialRightArrow {
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+			transform: rotate(90deg);
+}
+
+.tutorialDownArrow {
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+			transform: rotate(180deg);
+}
+
+.tutorialImage{
+	position: relative;
+	margin: auto;
+	width: 400px;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.openTutorial{
+	position: fixed;
+	display: block;
+	left:   15px;
+	bottom: 15px;
+	width:  30px;
+	height: 30px;
+	background-image: url('/images/toolbar-icons/Tour-Icon.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition:0.3s;
+	cursor: pointer;
+}
+.openTutorial:hover{
+	opacity: 0.8;
+}
+.openTutorial:active{
+	opacity: 1.0;
+}
+
+@media (max-width: 1050px) {
+	.tutorialCanvasHighlight {
+		top:240px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.tutorialCanvasHighlight {
+		left:45%;
+	}
+	.tutorialCanvasText {
+		left:30%;
+	}
+}

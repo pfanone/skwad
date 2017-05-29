@@ -1,0 +1,1618 @@
+
+/* This stuff is for the left menu */
+
+.leftMenu{
+	position: absolute;
+	top:80px;
+	left:0px;
+	width:400px;
+	bottom:0px;
+	background-color: #CCCCCC;
+	min-height: 550px;
+}
+
+.rightEditPane{
+	position: absolute;
+	top:80px;
+	right:0px;
+	left:400px;
+	bottom:0px;
+	min-width: 600px;
+	min-height: 550px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.leftMenuSlideMe{
+	position: absolute;
+	left:0px;
+	width:80px;
+	height:80px;
+	top:0px;
+	/* Top is animated by javascript in home_B.php */
+	background-color: #BBBBBB;
+}
+
+.leftMenuButton{
+	position: absolute;
+	left:0px;
+	width:80px;
+	height:80px;
+	background-size:50px 50px;
+	background-position: center 5px;
+	background-repeat: no-repeat;
+	background-color: rgba(187,187,187,0);
+	/* This is the same color as #BBBBBB */
+	transition: background-color 0.3s;
+}
+.leftMenuButton:hover{ background-color: rgba(187,187,187,0.4);
+	}
+
+.menuSearch{  background-image: url('/images/menu_search_black.png');
+	 top:0px;
+	  }
+.menuShapes{  background-image: url('/images/menu_shapes_black.png');
+	 top:80px;
+	 }
+.menuText{    background-image: url('/images/menu_text_black.png');
+	   top:160px;
+	}
+.menuDraw{    background-image: url('/images/menu_draw_black.png');
+	   top:240px;
+	}
+.menuUpload{  background-image: url('/images/menu_upload_black.png');
+	 top:320px;
+	}
+
+.menuButText{
+	position: absolute;
+	left:0px;
+	top:46px;
+	width:100%;
+	height:20px;
+}
+
+.leftMenuMainPanel{
+	position: absolute;
+	left:80px;
+	top:0px;
+	right:0px;
+	height:100%;
+	background-color: #BBBBBB;
+	overflow-y: scroll;
+}
+
+.searchForm{
+	height:38px;
+	/*Height is 38 because border is 1px (x2)*/
+	padding-left:10px;
+	padding-right:65px;
+	border: none;
+	padding-top:0px;
+	padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	transition: border 0.3s;
+}
+input.searchForm:focus {
+    outline-width: 0;
+}
+.searchForm:hover{ border: 1px solid rgba(0,0,0,0.7);
+	}
+.searchForm:focus{ border: 1px solid rgba(0,0,0,0.7);
+	}
+
+.liveSearchAnimation{
+	position: absolute;
+	top:27px;
+	right:42px;
+	width:50px;
+	height:25px;
+	background-color: #33CC33;
+	border-radius: 4px;
+	line-height: 27px;
+}
+
+/* from internet */
+.spinner {
+  margin: 0;
+  width: 50px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: #FFF;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+/* end of from internet */
+
+.leftMenuContent{
+	/*position: absolute;
+	top: 80px;
+	left:0px;
+	right:0px;
+	bottom: 0px;
+	/* WIDTH IS 400 - 80 = 320px */*/
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.leftMenuSubtitle{
+	position: absolute;
+	left:50%;
+	width:260px;
+	margin-left:-130px;
+	top:10px;
+}
+
+.leftMenuSubtitle2{
+	position: relative;
+	left:50%;
+	width:260px;
+	margin-left:-130px;
+	top:10px;
+	margin-top:10px;margin-bottom:10px;
+}
+
+
+.leftMenuDesignList{
+	position: absolute;
+	left:50%;
+	width:240px;
+	margin-left:-120px;
+	top:40px;
+	text-align: left;
+	/* To make all subviews (shapes, search results, etc) centered */
+}
+
+/* Shape stuff */
+
+.shapeChoices{
+	position: relative;
+	display: inline-block;
+	width:90px;
+	height:90px;
+	background-size: 100% 100%;
+	margin:14px;
+	/* This was finely measured... just leave it */
+}
+
+.bgHoverFade{
+	transition: background-color 0.3s;
+	background-color: rgba(0,0,0,0);
+}
+.bgHoverFade:hover{  background-color: rgba(0,0,0,0.1);
+	}
+.bgHoverFade:active{ background-color: rgba(0,0,0,0.0);
+	}
+
+.shape_square{    /* background-image: url('/images/shapes_square.png');
+	   */}
+.shape_circle{    /* background-image: url('/images/shapes_circle.png');
+	   */}
+.shape_triangle{  /* background-image: url('/images/shapes_triangle.png');
+	 */}
+.shape_roundRect{ /* background-image: url('/images/shapes_roundRect.png');
+	*/} /* No easy way to do this in fabric... */
+.shape_ellipse{   /* background-image: url('/images/shapes_ellipse.png');
+	  */}
+.shape_line{      /* background-image: url('/images/shapes_line.png');
+	     */}
+.shape_poly{      /* background-image: url('/images/shapes_poly.png');
+	     */} /* Have to specify point by point... too complex for user */
+
+.shapeImage{
+	position: absolute;
+	width:90px;
+	height:90px;
+}
+
+.popularSearches{
+/*	position: absolute;
+	left:50%;
+	top:60px;
+	width:200px;
+	margin-left: -100px;*/
+}
+.popularSearchEntry{
+	margin-top: 10px;
+	cursor: pointer;
+/*	position: relative;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;*/
+}
+
+
+
+
+
+
+
+/* Tutorial Stuff */
+.tutorialCover{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 2;
+
+	cursor: pointer;
+	
+	cursor: hand;
+}
+
+.tutorialTextContainer{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top:50%;
+	height: 500px;
+	margin-top: -250px;
+	text-align: center;
+}
+
+.tutorialImage{
+	position: relative;
+	margin: auto;
+	width: 400px;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.youtubeTutorialLinkLightbulb{
+	position: fixed;
+	display: block;
+	left:25px;
+	bottom:25px;
+	width: 30px;
+	height: 30px;
+	background-image: url('/images/tutorial_lightbulb.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition:0.3s;
+	opacity: 0.5;
+}
+.youtubeTutorialLinkLightbulb:hover{ opacity: 0.8;
+	}
+.youtubeTutorialLinkLightbulb:active{ opacity: 1.0;
+	}
+
+
+
+
+
+
+
+
+
+/* Context menus within left menu */
+
+.shape_mask{
+	position: absolute;
+	width:70px;
+	height:70px;
+	top:50px;
+	background-size: 100% 100%;
+}
+
+.shape_mask_0{ background-image: url('/images/shape_context_mask_0.png');
+	left: 20px;
+	 }
+.shape_mask_1{ background-image: url('/images/shape_context_mask_1.png');
+	left: 90px;
+	 }
+.shape_mask_2{ background-image: url('/images/shape_context_mask_2.png');
+	left: 160px;
+	}
+.shape_mask_3{ background-image: url('/images/shape_context_mask_3.png');
+	left: 230px;
+	}
+
+.shape_mask_slider{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top:50px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+.shape_mask_text{
+	position: absolute;
+	left:50%;
+	width:260px;
+	margin-left:-130px;
+	top:125px;
+}
+
+
+.common_context_container{
+	width:100%;
+	text-align: center;
+}
+.context_option{
+	position: relative;
+	display: inline-block;
+	width:50px;
+	height:60px;
+	background-size: 106% 90%;
+	background-position: 50% -100%;
+	background-repeat: no-repeat;
+}
+.CO_moveForward{  background-image: url('/images/context_moveForward.png');
+	 }
+.CO_moveBack{     background-image: url('/images/context_moveBack.png');
+	    }
+.CO_invert{       background-image: url('/images/context_invert.png');
+	      }
+.CO_clone{  	  background-image: url('/images/context_clone.png');
+	 	    }
+.CO_delete{ 	  background-image: url('/images/context_delete.png');
+		    }
+.CO_hFlip{  	  background-image: url('/images/context_hFlip.png');
+	 	    }
+.CO_vFlip{ 	      background-image: url('/images/context_vFlip.png');
+		    }
+.CO_hCenter{  	  background-image: url('/images/context_hCenter.png');
+	     }
+.CO_vCenter{ 	  background-image: url('/images/context_vCenter.png');
+		    }
+.CO_tLeft { 	  background-image: url('/images/context_text_left.png');
+		    }
+.CO_tCent { 	  background-image: url('/images/context_text_center.png');
+		    }
+.CO_tRight{ 	  background-image: url('/images/context_text_right.png');
+		    }
+.ind_0{  top:50px;
+	 }
+.ind_1{  top:190px;
+	}
+.ind_2{  top:110px;
+	}
+.ind_3{  top:50px;
+	 }
+.ind_4{  top:50px;
+	 }
+.ind_5{  top:45px;
+	 }
+.object_CD_text{
+	position: absolute;
+	width:100%;
+	top:40px;
+}
+
+/* Font Stuff */
+
+.fontChoices{
+	position: relative;
+	display:block;
+	width:240px;
+	height:60px;
+	/* Width inherited from leftMenuDesignList */
+	margin-bottom:3px;
+	/* This was finely measured... just leave it */
+}
+.fontChoiceBGSlider{
+	position: absolute;
+	display:block;
+	width:240px;
+	height:60px;
+	/* Width inherited from leftMenuDesignList */
+	background-color: rgba(0,0,0,0.1);
+}
+
+.fontImage{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+.fontChange{
+	background-size: 100% 100%;
+	
+	background-repeat: no-repeat;
+	user-drag: none;
+	
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+}
+
+.textEditForm{
+	position: absolute;
+	left:20px;
+	top:50px;
+	height:38px;
+	width:260px;
+	/*Height is 38 because border is 1px (x2)*/
+	padding-left:10px;
+	padding-right:10px;
+	border: none;
+	padding-top:0px;
+	padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	transition: border 0.3s;
+}
+input.textEditForm:focus {
+    outline-width: 0;
+}
+.textEditForm:hover{ border: 1px solid rgba(0,0,0,0.7);
+	}
+.textEditForm:focus{ border: 1px solid rgba(0,0,0,0.7);
+	}
+
+/* Draw stuff */
+
+.drawChoices{
+	position: relative;
+	display:block;
+	width:240px;
+	height:60px;
+	/* Width inherited from leftMenuDesignList */
+	margin-bottom:3px;
+	/* This was finely measured... just leave it */
+	background-size: 100% 100%;
+	background-position: center;
+}
+.draw_thin_black{   background-image:url('/images/draw_thin_black.png');
+	  }
+.draw_medium_black{ background-image:url('/images/draw_medium_black.png');
+	}
+.draw_thick_black{  background-image:url('/images/draw_thick_black.png');
+	 }
+.draw_thin_white{   background-image:url('/images/draw_thin_white.png');
+	  }
+.draw_medium_white{ background-image:url('/images/draw_medium_white.png');
+	}
+.draw_thick_white{  background-image:url('/images/draw_thick_white.png');
+	 }
+
+.draw_slider{
+	position: absolute;
+	width:240px;
+	height:60px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+/* Upload image stuff */
+
+.lightGrayButton{
+	position: absolute;
+	/*width: 200px;*/ width:100%;
+	height:40px;
+	
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+	overflow: hidden;
+}
+.lightGrayButton:hover{ background-color: #F5F5F5;
+	}
+
+
+.uploadOption1{
+	position: absolute;
+	top:0px;
+	left:20px;
+	right:20px;
+	height:250px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 10px;
+}
+.uploadOption2{
+	position: absolute;
+	top:270px;
+	left:20px;
+	right:20px;
+	height:240px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 10px;
+}
+
+.infographic_A{
+	position: absolute;
+	width: 280px;
+	height:70px;
+	top:10px;
+	left:0px;
+	/*background-color: #ABC;*/
+	background-image:url('/images/custom_instruct_A.png');
+	background-size:100% 100%;
+	background-position: center;
+}
+.infographic_B{
+	position: absolute;
+	width: 280px;
+	height:70px;
+	top:10px;
+	left:0px;
+	/*background-color: #ABC;*/
+	background-image:url('/images/custom_instruct_B.png');
+	background-size:100% 100%;
+	background-position: center;
+}
+.uploadSubtitleC{
+	position: absolute;
+	top:85px;
+	width:100%;
+}
+.instructionsButton{
+	top:130px;
+}
+.uploadImageButton{
+	top:180px;
+}
+.useWebcamButton{
+	top:180px;
+}
+.uploadSubtitleB{
+	position: absolute;
+	top:225px;
+	width:100%;
+}
+
+.gotItButton{
+	top:385px;
+}
+.AFB1{ top:300px;
+	}
+.AFB2{ top:350px;
+	}
+.AFB3{ top:400px;
+	}
+
+.uploadImageForm{
+	position: absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	opacity:0;
+	/* background-color: #ABC;
+	*/
+}
+.uploadProgress{
+	position: absolute;
+	width:0%;
+	height:100%;
+	left:0px;
+	background-color: #99FF99;
+}
+.uploadImageText{
+	position: absolute;
+	width:100%;
+	height:100%;
+	line-height: 40px;
+}
+.uploadSubtitleA{
+	position: absolute;
+	top:80px;
+	width:100%;
+}
+
+
+
+.asyncLoadAboutImage{
+	position: absolute;
+	width:100%;
+	left:0;
+	top:210px;
+}
+.warningContainer{
+	position: absolute;
+	width:80%;
+	left:10%;
+	height:110px;
+	top:0px;
+	border-radius: 10px;
+}
+.warningTitle{
+	position: absolute;
+	width:100%;
+	top:10px;
+}
+.warningSubtitle{
+	position: absolute;
+	width: 90%;
+	left:5%;
+	top:35px;
+}
+.greenWarning{
+	border: 2px solid rgba(0,255,0,0.7);
+	background-color: rgba(0,255,0,0.3);
+}
+.yellowWarning{
+	border: 2px solid rgba(255,255,0,0.7);
+	background-color: rgba(255,255,0,0.3);
+}
+.redWarning{
+	border: 2px solid rgba(255,0,0,0.7);
+	background-color: rgba(255,0,0,0.3);
+}
+
+
+.uploadTips{
+	position: absolute;
+	left:20px;
+	width:70px;
+	height:100px;
+	border-radius:10px;
+	background-size:cover;
+	background-position: center;
+}
+.tip_1{
+	background-image:url('/images/tips_1.jpg');
+	border: 2px solid rgba(0,255,0,1.0);
+	top:50px;
+}
+.tip_2{
+	background-image:url('/images/tips_2.jpg');
+	border: 2px solid rgba(255,255,0,1.0);
+	top:170px;
+}
+.tip_3{
+	background-image:url('/images/tips_3.jpg');
+	border: 2px solid rgba(255,0,0,1.0);
+	top:290px;
+}
+.tip_1B{
+	background-image:url('/images/tips_1B.jpg');
+	border: 2px solid rgba(0,0,0,1.0);
+	top:50px;
+}
+.tip_2B{
+	background-image:url('/images/tips_2B.jpg');
+	border: 2px solid rgba(0,0,0,1.0);
+	top:170px;
+}
+.tip_3B{
+	background-image:url('/images/tips_3B.jpg');
+	border: 2px solid rgba(0,0,0,1.0);
+	top:290px;
+}
+.uploadTipText{
+	position: absolute;
+	left:105px;
+	right:20px;
+	height:80px;
+	
+}
+.tip_1_text{
+	top:50px;
+}
+.tip_2_text{
+	top:170px;
+}
+.tip_3_text{
+	top:290px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Login stuff */
+.whiteLoginOverlay{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color: rgba(255,255,255,0.95);
+	z-index: 2;
+}
+
+.loginClose{
+	position: absolute;
+	right:10px;
+	top:10px;
+	height:30px;
+	width:30px;
+	background-image:url('/images/login_close.png');
+	background-size: 100% 100%;
+}
+
+.loginLogo{
+	position: absolute;
+	left:50%;
+	width:300px;
+	margin-left:-150px;
+	top:50%;
+	margin-top: -150px;
+	height:100px;
+	background-image: url('/images/logo.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+/* THIS STUFF IS COPIED FROM STYLE_HOME_A: */
+.loginText{
+	position: relative;
+	width:250px;
+	left:50%;
+	margin-left:-125px;
+	top:50%;
+	margin-top:-30px;
+}
+
+.facebookLogin{
+	margin-top:50px;
+	height:40px;
+	background-color: #3B5998;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+
+.facebookLogin:hover{
+	background-color: #7486AA;
+}
+
+.emailLogin{
+	position: absolute;
+	width: 200px;
+	top:50%;
+	margin-top:100px;
+	height:40px;
+	left:50%;
+	margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.emailLogin:hover{
+	background-color: #D4D4D4;
+}
+
+.checkEmailText{
+	position: relative;
+	width:100%;
+	top:50%;
+}
+
+
+.emailForm{
+	width: 200px;
+	margin-top:100px;
+	/*height:40px;*/
+	margin-left:-100px;
+	padding-left:10px;
+	padding-right:10px;
+	border: none;
+	padding-top:0px;
+	padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	transition: border 0.3s;
+
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+input.emailForm:focus {
+    outline-width: 0;
+}
+.emailForm:hover{ border: 1px solid rgba(0,0,0,0.7);
+	}
+.emailForm:focus{ border: 1px solid rgba(0,0,0,0.7);
+	}
+
+.emailSubmit{
+	position: absolute;
+	width: 200px;
+	top:50%;
+	margin-top:150px;
+	height:40px;
+	left:50%;
+	margin-left:-100px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.emailSubmit:hover{ background-color: #D4D4D4;
+	}
+
+.loginModal{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+/* END OF COPIED STUFF */
+
+
+
+
+
+
+
+
+
+/* Webcam stuff */
+.blackWebcamOverlay{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 2;
+}
+.tempHider{ opacity: 0;
+	}
+
+.webcamClose{
+	position: absolute;
+	right:10px;
+	top:10px;
+	height:30px;
+	width:30px;
+	background-image:url('/images/webcam_close.png');
+	background-size: 100% 100%;
+}
+
+
+.videoContainer{
+	position: absolute;
+	width:700px;
+	height:500px;
+	top:50px;
+	left:50%;
+	margin-left:-350px;
+}
+.webcamVideo{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+.flipVideo{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+	/* Safari and Chrome */
+    -moz-transform:rotateY(180deg);
+	/* Firefox */
+}
+.webcamSnapshot{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+.webcamWhiteFlash{
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: #FFF;
+}
+.webcamRectangleGuide{
+	position: absolute;
+	width:100%;
+	height:100%;
+	/* - 6 because 3px border */
+
+	border: 3px solid rgba(255,255,255,0.8);
+	border-style: dashed;
+
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.takeSnapButton{
+	position: absolute;
+	width:200px;
+	height:40px;
+	bottom:10px;
+	left:50%;
+	margin-left: -100px;
+
+	background-color: rgba(255,0,0,0.7);
+	border-radius: 23px;
+	line-height: 40px;
+	border: 1px solid rgba(255,255,255,0.2);
+	transition: background-color 0.3s;
+}
+.takeSnapButton:hover{
+	background-color: rgba(255,0,0,0.9);
+}
+
+.redoSnapButton{
+	position: absolute;
+	width:200px;
+	height:40px;
+	bottom:10px;
+	left:35%;
+	margin-left: -100px;
+
+	background-color: rgba(255,0,0,0.7);
+	border-radius: 23px;
+	line-height: 40px;
+	border: 1px solid rgba(255,255,255,0.2);
+	transition: background-color 0.3s;
+}
+.redoSnapButton:hover{
+	background-color: rgba(255,0,0,0.9);
+}
+
+.useSnapButton{
+	position: absolute;
+	width:200px;
+	height:40px;
+	bottom:10px;
+	left:65%;
+	margin-left: -100px;
+
+	background-color: rgba(0,255,0,0.7);
+	border-radius: 23px;
+	line-height: 40px;
+	border: 1px solid rgba(255,255,255,0.2);
+	transition: background-color 0.3s;
+}
+.useSnapButton:hover{
+	background-color: rgba(0,255,0,0.9);
+}
+
+.webcamText{
+	position: absolute;
+	width: 700px;
+	top:560px;
+	left:50%;
+	margin-left: -350px;
+}
+.webcamText2{
+	position: absolute;
+	width: 700px;
+	top:17px;
+	left:50%;
+	margin-left: -350px;
+}
+.mirrorThings{ color:#FFF;
+	transition: opacity 0.3s;}
+.mirrorThings:hover{opacity: 0.8;}
+
+.webcamProcessingIndicator{
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.8);
+	background-image: url('/images/webcam_loading.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.countdownText{
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top:50%;
+	margin-top: -100px;
+	font-size: 50px;
+	line-height: 200px;
+	text-shadow: 0px 0px 5px #000000;
+}
+
+.webcamError{
+	position: absolute;
+	width:100%;
+	height:30px;
+	top:50%;
+	margin-top: -15px;
+}
+
+
+
+/* Live search stuff */
+.searchResults{
+	overflow-y: scroll;
+}
+
+.loadMoreSearchResults{
+	position: relative;
+	width: 280px;
+	left:20px;
+	height: 50px;
+	margin-bottom:50px;
+	line-height: 50px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 3px;
+	cursor: pointer;
+	cursor: hand;
+	transition: 0.3s;
+}
+.loadMoreSearchResults:hover{ background-color: rgba(0,0,0,0.1);
+	}
+
+.searchResult{
+	position: relative;
+	display: inline-block;
+	width:130px;
+	height:130px;
+	margin-top:15px;
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: rgba(255,255,255,1);
+}
+
+.searchResult_contatiner:nth-child(odd) > .searchResult{
+	margin-left: 15px;
+}
+
+.searchImage{
+	position: absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+}
+
+.searchImageAnim{
+	transition: 0.2s;
+}
+.searchImageAnim:hover{
+	box-shadow: 0px 7px 10px #888888;
+
+	-ms-transform: scale(1.05,1.05);
+	/* IE 9 */
+    -webkit-transform: scale(1.05,1.05);
+	/* Safari */
+    transform: scale(1.05,1.05);
+}
+
+.liveSearchLoading{
+	background-color: rgba(187,187,187,0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* This stuff is for the creation pane */
+
+.whiteBackgroundTouchSensitive{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+.nameForm{
+	position: absolute;
+	left:20px;
+	top:20px;
+	height:38px;
+	width:175px;
+	padding-left:10px;
+	padding-right:10px;
+	border: none;
+	padding-top:0px;
+	padding-bottom: 0px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.1);
+	transition: border 0.3s;
+}
+input.nameForm:focus {
+    outline-width: 0;
+}
+.nameForm:hover{ border: 1px solid rgba(0,0,0,0.4);
+	}
+.nameForm:focus{ border: 1px solid rgba(0,0,0,0.4);
+	}
+
+.buyButton{
+	position: absolute;
+	width: 100px;
+	top:20px;
+	height:40px;
+	right:20px;
+	background-color: #7DC7BE;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.buyButton:hover{ background-color: #ACDBD5;
+	}
+
+.saveButton{
+	position: absolute;
+	width: 100px;
+	top:20px;
+	height:40px;
+	right:240px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.saveButton:hover{ background-color: #F5F5F5;
+	}
+.saveButtonAlert{
+	color:#FFF;/*For font*/
+	background-color: #FF0000;
+}
+.saveButtonAlert:hover{ background-color: #CC0000;
+	}
+
+.previewButton{
+	position: absolute;
+	width: 100px;
+	top:20px;
+	height:40px;
+	right:130px;
+	background-color: #E6E6E6;
+	border-radius: 3px;
+	line-height: 40px;
+	transition: background-color 0.3s;
+}
+.previewButton:hover{ background-color: #F5F5F5;
+	}
+
+.allDrawingStuffContainer{
+	position: absolute;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+}
+
+.canvasMyContainer{
+	position: absolute;
+	left:50%;
+	top:50%;
+	/* Left and Top position decided by size, which is decided by php as there are different tattoo sizes */
+}
+
+.canvasDottedBorder{
+	position: absolute;
+	border: 1px solid rgba(0,0,0,1);
+	border-style: dashed;
+
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    pointer-events: none;
+
+    opacity: 0.3;
+}
+
+.canvas{
+	
+}
+
+/*.whiteCoverLeft{   width: 1000px;
+	left:-500px;
+	top:0px;
+	height:100%;
+	}
+.whiteCoverTop{    height: 500px;
+	left:500px;
+	top:0px;
+	right:500px;
+	}
+.whiteCoverRight{  width: 1000px;
+	right:-500px;
+	top:0px;
+	height:100%;
+	}
+.whiteCoverBottom{ height: 500px;
+	left:500px;
+	bottom:0px;
+	right:500px;
+	}
+*/
+.whiteCoverLeft{   width: 1000px;
+	left:-500px;
+	top:0px;
+	height:100%;
+	}
+.whiteCoverTop{    height: 500px;
+	left:500px;
+	top:0px;
+	}
+.whiteCoverRight{  width: 1000px;
+	right:-500px;
+	top:0px;
+	height:100%;
+	}
+.whiteCoverBottom{ height: 500px;
+	left:500px;
+	bottom:0px;
+	}
+.whiteCover{
+	position: absolute;
+	background-color: rgba(250,250,250,0.8);
+	pointer-events: none;
+}
+
+
+.rulerContainer{ /* Left and Top position decided by size, which is decided by php as there are different tattoo sizes */
+	position: absolute;
+	left:50%;
+	top:50%;
+	/*background-color: #ABC;*/
+	pointer-events: none;
+}
+
+.rulerLine{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0.2;
+	pointer-events: none;
+}
+.rulerTickV{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	top:-3px;
+	height:6px;
+	width:1px;
+}
+.rulerTickH{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	left:-3px;
+	height:1px;
+	width:6px;
+}
+.rulerNumberV{
+	position: absolute;
+	top:-15px;
+	margin-left: -3px;
+	line-height:10px;
+}
+.rulerNumberH{
+	position: absolute;
+	left:-15px;
+	margin-left: -3px;
+	margin-top:-4px;
+	line-height:10px;
+}
+
+.cmToggle{
+	position: absolute;
+	bottom:10px;
+	right:30px;
+	opacity: 0.5;
+	pointer-events: auto;
+}
+.inToggle{
+	position: absolute;
+	bottom:10px;
+	right:61px;
+	opacity: 0.5;
+	pointer-events: auto;
+}
+.slashForUnitToggle{
+	position: absolute;
+	bottom:10px;
+	right:52px;
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+.zoomHover{ 
+	position: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+
+	opacity: 0.4;
+	
+
+	transition: 0.15s;
+}
+.zoomHover:hover{ opacity: 0.9;
+	}
+.zoomOut{
+	left:410px;
+	bottom:10px;
+	width:20px;
+	height:20px;
+	background-image: url('/images/zoom_out.png');
+}
+.zoomIn{
+	left:487px;
+	bottom:10px;
+	width:20px;
+	height:20px;
+	background-image: url('/images/zoom_in.png');
+}
+.zoomBumpAnim{
+	-ms-transform: scale(1.25,1.25);
+	/* IE 9 */
+    -webkit-transform: scale(1.25,1.25);
+	/* Safari */
+    transform: scale(1.25,1.25);
+}
+
+.zoomText{
+	position: fixed;
+	left:435px;
+	bottom:10px;
+	width:45px;
+	height: 20px;
+
+	opacity: 0.7;
+}
+.linkCursor{
+	cursor: pointer;
+	
+	cursor: hand;
+
+	user-drag: none;
+	
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.canvasZoom{ 
+	transition: 0.3s;
+	
+}
+.canvasZoom1{ -ms-transform: scale(0.5,0.5);
+	/* IE 9 */
+    		  -webkit-transform: scale(0.5,0.5);
+	/* Safari */
+    		  transform: scale(0.5,0.5);
+	}
+.canvasZoom2{ -ms-transform: scale(0.75,0.75);
+	/* IE 9 */
+    		  -webkit-transform: scale(0.75,0.75);
+	/* Safari */
+    		  transform: scale(0.75,0.75);
+	}
+.canvasZoom3{ -ms-transform: scale(1,1);
+	/* IE 9 */
+    		  -webkit-transform: scale(1,1);
+	/* Safari */
+    		  transform: scale(1,1);
+	}
+.canvasZoom4{ -ms-transform: scale(1.25,1.25);
+	/* IE 9 */
+    		  -webkit-transform: scale(1.25,1.25);
+	/* Safari */
+    		  transform: scale(1.25,1.25);
+	}
+.canvasZoom5{ -ms-transform: scale(1.5,1.5);
+	/* IE 9 */
+    		  -webkit-transform: scale(1.5,1.5);
+	/* Safari */
+    		  transform: scale(1.5,1.5);
+	}
+
+
+
+
+.state_redo{
+	right:60px;
+	bottom:10px;
+	width:20px;
+	height:20px;
+	background-image: url('/images/state_redo.png');
+}
+.redoText{
+	position: absolute;
+	right:-42px;
+}
+.state_undo{
+	right:100px;
+	bottom:10px;
+	width:20px;
+	height:20px;
+	background-image: url('/images/state_undo.png');
+}
+.undoText{
+	position: absolute;
+	left:-42px;
+}
+
+.stateChange{ 
+	position: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	opacity: 0.4;
+	
+
+	transition: 0.15s;
+	
+}
+.stateChange:hover{ opacity: 0.9;
+	}
+
+
+.ignoreHighlight{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.canvasLoading{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	left:0;
+	top:0;
+	/*background-image: url('/images/canvas_loading.gif');*/
+	background-position: center;
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+
+	opacity: 0.8;
+}
+
+#canvasLoadingText {
+	position: relative;
+    top: 60%;
+    left: 35%;
+}
+
+/* Loading indicator */
+
+.sk-folding-cube {
+	top:50%;
+	left:50%;
+	margin-top:-25px;
+	margin-left: -25px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	-webkit-transform: rotateZ(45deg);
+	      transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+	
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7DC7BE;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+	
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+	
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+	
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+	
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+	
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+	
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+	
+  }
+}
+
+/* End of loading indicator */

@@ -1,0 +1,129 @@
+
+@font-face {
+    font-family: monserrat;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+body {
+	font-family: monserrat;
+	background-color: #393D3F;
+}
+
+.navbar {
+	background-color: #131200;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.nav > li > a {
+	color: #F4F4F6;
+}
+
+#tattoo_search_container > h3 {
+	color: #F4F4F6;
+}
+
+input {
+	color: #000;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 2px;
+}
+
+.main-header {
+	color: #000;
+}
+
+.graph-div,
+.graph-btn,
+.tattoo-div {
+	border: 1px solid #000;
+	box-shadow: 0px 0px 5px #000;
+	padding: 10px 15px;
+	margin-top: 10px;
+	background-color: #131200;
+	color: #F4F4F6;
+	position: relative;
+}
+
+.graph-btn.active,
+.graph-btn:hover {
+	background-color: #34495e;
+}
+
+.graph-numbers {
+	position: absolute;
+	bottom: 5px;
+	width: 85%;
+}
+
+.graph-div-full { 
+	height: 292px;
+	/*max-width: 270px;*/
+}
+.graph-div-half { min-height: 141px; }
+
+.tattoo-div { min-height: 300px; }
+
+.tattoo-img-container {
+	background-color: #fff;
+	width:100%;
+	min-height: 200px;
+	height: 200px;
+}
+
+.tattoo-img {
+	width: 100%;
+	height: auto;
+}
+
+.tattoo-header {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	min-height: 26px;
+	width:100%;
+}
+
+.fa-caret-up { color: #2ecc71; }
+.fa-caret-down { color: #c0392b; }
+
+.badge { 
+	min-width: 30px;
+	background-color: rgba(54, 162, 235, 0.3);
+}
+
+.teamContainer > .team {
+	background-color: #fff;
+	color: #666;
+}
+
+.teamContainer > .team > .label {
+	color: #666;
+}
+
+.dl-horizontal > dt {
+	text-align: left;
+}
+
+td > a,
+td > a:visited {
+	color: #F4F4F6;
+	text-decoration: underline;
+	display: block;
+}
+
+td > a:hover {
+	color:#ccc;
+}
+
+.table-hover > tbody > tr:hover {
+	background-color: #999;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+@media (max-width: 1199px) {
+	.marginT20-lg { margin-top: 20px; }
+}

@@ -1,0 +1,178 @@
+/* This section applies to the top nav bar that is common between pages in the app */
+
+/*body { padding-top: 70px; }*/
+
+.navbar {
+	background-color: #131200;
+	border-bottom: none;
+	height:55px;
+	margin-bottom: 0px;
+	border-radius: 0px !important;
+}
+
+.navbar-header {
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 100;
+}
+
+.navbar-brand {
+	padding:0px;
+	float:initial;
+	z-index: 100;
+	/*display: initial;*/
+}
+
+.nav.navbar-nav.create_nav {
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+}
+
+.navbar-brand > img {
+	max-height: 60px;
+	display: initial;
+}
+
+.nav > li {
+	color: #000;
+	transition: 0.3s;
+	
+	text-align: right;
+	font-size: 15px;
+	line-height: 22px;
+	
+	height: 30px;
+
+	padding: 0px!important;
+	margin: 10px 10px 0px 10px;
+}
+
+.nav > li.small {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.nav > li.create_logo {
+	width: 100%;
+	margin: 0px;
+}
+
+.nav > li > a {
+	color: #F4F4F6;
+	padding: 0px!important;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	/*color: #7DC7BE;
+	background-color: #fff;*/
+	background-color: transparent!important;
+	padding-bottom: 5px!important;
+	border-bottom: 3px solid #62BBC1!important;
+}
+
+.logo{
+	float: left;
+	width:150px;
+	height:50px;
+	margin-left: 0px!important;
+	margin-top: 15px;
+	background-image: url('/images/logo.png');
+	background-size: cover;
+	opacity: 0.9;
+}
+
+.logoWhite_container {
+	background-color: #fff;
+    width: 61px;
+    height: 56px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+.logoWhite{
+	float: left;
+	width: 51px;
+	height: 17px;
+	margin-top: 18px;
+	margin-left: 4px;
+	background-image: url('/images/logo_smokey.svg');
+	background-color: #fff;
+	background-size: cover;
+}
+
+.logoCreate{
+	float: left;
+	width:150px;
+	height:50px;
+	margin-left: 15px!important;
+	margin-top: 15px;
+	background-image: url('/images/logo_create.png');
+	background-size: 80% auto;
+	background-position: left;
+	background-repeat: no-repeat;
+	opacity: 0.9;
+}
+
+#createNav {
+	margin: auto;
+    display: table;
+    margin-top: 10px;
+}
+
+.topBarLinks{
+	position: absolute;
+	height:30px; right:15px; top:25px;
+}
+
+.iconLink{
+	float:right;
+	width:20px;
+	height:20px;
+	margin:auto;
+	margin-top:5px;
+	margin-left: 5px;
+	transition: opacity 0.3s;
+}
+.iconLink.cart {
+	width:40px;
+	margin-right: 3px;
+}
+.iconLink > img {
+	width:100%;
+	height:100%;
+	margin:auto;
+}
+
+.iconCart{         background-image: url('/images/icon_cart.png');      }
+.iconInstagram{    background-image: url('/images/icon_instagram.png'); }
+.iconProfile{      background-image: url('/images/User-Icon.svg');      }
+.iconSearch{       background-image: url('/images/icon_search.png');    }
+.iconTwitter{      background-image: url('/images/icon_twitter.png');   }
+
+.topBarTextLink{
+	float:left;
+	height:30px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:30px;
+}
+
+.underline{
+	width:100%; height:4px;
+	background-color: #7DC7BE;
+	opacity: 0.6;
+}
+
+.whiteCoverAllLoading{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #FFF;
+	opacity: 0.9;
+	z-index: 1100;
+}

@@ -17,7 +17,7 @@ use View;
 
 class SkwadController extends BaseController
 {
-	public function anyIndex() {
+	public function index() {
 
 		$return_array = array();
 

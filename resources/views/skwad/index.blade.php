@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-xs-12 section_div_top_half purpleBG padL40">
 				<h3>Today's Sales</h3>
-				<h1 class="platinumText">${{ $sales_today }}</h1>
+				<p class="bigText platinumText">$ {{ $sales_today }}</p>
 			</div>
 			<div class="col-xs-12 section_div_bottom_half darkblueBG">
 				<p class="pad20">Timmy Falls Down Well, Climbing Needs Work</p>

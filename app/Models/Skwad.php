@@ -17,7 +17,7 @@ use View;
 class Skwad {
 
 	/**
-	 *	Order functions
+	 *	Daily Stats Function
 	 */
 	public static function getDailyStats() {
 
@@ -34,6 +34,20 @@ class Skwad {
 		$get_orders_picked = DB::select('SELECT "Total", COUNT(`order_id`) AS `orders_picked` FROM `shopify_orders_fulfillment` WHERE DATE_FORMAT(CONVERT_TZ(`created_at`, "GMT", "EST"), "%Y-%m-%d") >= DATE_FORMAT(CONVERT_TZ(NOW(), "GMT", "EST"), "%Y-%m-%d") AND `status` = "complete"', array());
 
 		foreach ($get_orders_picked as $key => $value) $return_array['orders_picked'] = $value->orders_picked;
+
+		return $return_array;
+	}
+
+	/**
+	 *	Quotes
+	 */
+	public static function getQuotes() {
+
+		$return_array = array();
+
+		$get_quotes = DB::select("SELECT `quote` FROM `quotes` ORDER BY `created_at` DESC", array());
+
+		foreach ($get_quotes as $key => $value) array_push($return_array, $value->quote);
 
 		return $return_array;
 	}

@@ -21,8 +21,9 @@
 				<h3>Today's Sales</h3>
 				<p class="bigText platinumText">{{ $sales_today }}</p>
 			</div>
-			<div class="col-xs-12 section_div_bottom_half darkblueBG">
-				<p class="pad20">Timmy Falls Down Well, Climbing Needs Work</p>
+			<div class="col-xs-12 section_div_bottom_half darkblueBG padL40">
+				<h3>Orders Picked Today</h3>
+				<p class="bigText platinumText">{{ $orders_picked }}</p>
 			</div>
 		</div>
 	</div>

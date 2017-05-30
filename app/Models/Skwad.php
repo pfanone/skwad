@@ -50,7 +50,7 @@ class Skwad {
 		$quote_count = 0;
 		$offset = 0;
 
-		foreach ($get_quotes as $key => $value) {
+		foreach ($get_quotes_count as $key => $value) {
 			$quote_count = $value->count;
 
 			if ($quote_count > 0) {

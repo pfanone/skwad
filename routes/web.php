@@ -11,7 +11,11 @@
 |
 */
 
-Route::resource('/', 'SkwadController');
+Route::group(['middleware' => ['auth']], function () {
+
+	Route::resource('/', 'SkwadController');
+	
+});
 
 // Auth Routes
 Auth::routes();

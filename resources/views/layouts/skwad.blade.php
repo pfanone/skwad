@@ -18,6 +18,8 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
+	<meta http-equiv="refresh" content="180"/>
+
 	<!-- Scripts -->
 	<script>
 		$_token = "{{ csrf_token() }}";

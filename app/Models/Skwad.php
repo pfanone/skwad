@@ -45,7 +45,7 @@ class Skwad {
 
 		$return_array = array();
 
-		$get_quotes = DB::select("SELECT `quote` FROM `quotes` ORDER BY `created_at` DESC", array());
+		$get_quotes = DB::select("SELECT `quote` FROM `skwad`.`quotes` ORDER BY `created_at` DESC", array());
 
 		foreach ($get_quotes as $key => $value) array_push($return_array, $value->quote);
 

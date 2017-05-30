@@ -45,7 +45,21 @@ class Skwad {
 
 		$return_array = array();
 
-		$get_quotes = DB::select("SELECT `quote` FROM `skwad`.`quotes` ORDER BY `created_at` DESC", array());
+		$get_quotes_count = DB::select("SELECT COUNT(`quote`) AS `count` FROM `skwad`.`quotes`", array());
+
+		$quote_count = 0;
+		$offset = 0;
+
+		foreach ($get_quotes as $key => $value) {
+			$quote_count = $value->count;
+
+			if ($quote_count > 0) {
+				$range_val = round($quote_count / 10);
+				$offset = rand(0, $range_val);
+			}
+		}
+
+		$get_quotes = DB::select("SELECT `quote` FROM `skwad`.`quotes` ORDER BY `created_at` DESC LIMIT ?,10", array($offset));
 
 		foreach ($get_quotes as $key => $value) array_push($return_array, $value->quote);
 

@@ -12,3 +12,6 @@
 */
 
 Route::resource('/', 'SkwadController');
+
+// Auth Routes
+Auth::routes();

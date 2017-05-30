@@ -19,7 +19,7 @@ class SkwadController extends BaseController
 {
 	public function index() {
 
-		$return_array = array();
+		$return_array = Skwad::getDailyStats();
 
 		$return_array['news'] = array(
 			"50 Car Pile-Up Results In New City Sculpture",

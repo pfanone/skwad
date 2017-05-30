@@ -18,7 +18,7 @@
 	<div class="col-xs-12 col-sm-5 section_div">
 		<div class="row">
 			<div class="col-xs-12 section_div_top_half purpleBG padL40">
-				<h3 class="platinumText">Today's Sales</h3>
+				<h3>Today's Sales</h3>
 				<h1 class="platinumText">${{ $sales_today }}</h1>
 			</div>
 			<div class="col-xs-12 section_div_bottom_half darkblueBG">

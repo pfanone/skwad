@@ -31,9 +31,9 @@ class Skwad {
 
 		foreach ($get_sales as $key => $value) $return_array['sales_today'] = money_format("%n", $value->total_sales);
 
-		$get_orders_picked = DB::select("SELECT COUNT(`order_id`) AS `count` FROM `shopify_orders` LEFT JOIN `shopify_orders_priority` USING(`order_id`) LEFT JOIN `shopify_orders_fulfillment` USING(`order_id`) WHERE `fulfillment_status` IS NULL AND `shopify_orders_fulfillment`.`status` IS NULL AND `risk_assessment` != 'cancel'", array());
+		$get_orders_picked = DB::select('SELECT "Total", COUNT(`order_id`) AS `orders_picked` FROM `shopify_orders_fulfillment` WHERE DATE_FORMAT(CONVERT_TZ(`created_at`, "GMT", "EST"), "%Y-%m-%d") >= DATE_FORMAT(CONVERT_TZ(NOW(), "GMT", "EST"), "%Y-%m-%d") AND `status` = "complete"', array());
 
-		foreach ($get_orders_picked as $key => $value) $return_array['orders_picked'] = $value->count;
+		foreach ($get_orders_picked as $key => $value) $return_array['orders_picked'] = $value->orders_picked;
 
 		return $return_array;
 	}

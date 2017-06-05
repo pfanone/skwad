@@ -33,7 +33,8 @@
 				<img class="img-responsive img-thumbnail" src="https://s3.amazonaws.com/inkboxdesigns/preview_image/Back(BottomMiddle)1_Thumb.jpg">
 			</div>
 			<div class="col-xs-12 col-sm-7">
-				<p class="pad20">Is Kitty Kibble Shortage A Hoax? Sims Search For Truth</p>
+				<h2>Meet [ NAME ]!</h2>
+				<h3>Welcome to the Inkbox Family [ NAME ]!</h3>
 			</div>
 		</div>
 	</div>

@@ -5,8 +5,11 @@
 
 <div class="header_div blackBG">
 	<div class="row">
-		<div class="col-xs-12 col-sm-9">
+		<div class="col-xs-12 col-sm-3">
 			<p class="marginT10 marginL10"><img src="{{ url('/images/skwad_logo_export.png') }}" height="102" width="136"></p>
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<div>Total Points: {{ $total_points }}</div>
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<div class="digital-clock">00:00:00</div>
@@ -19,11 +22,11 @@
 		<div class="row">
 			<div class="col-xs-12 section_div_top_half purpleBG padL40">
 				<h3>Today's Sales</h3>
-				<p class="bigText platinumText">{{ $sales_today }}</p>
+				<p class="bigText platinumText">{{ $stats['sales_today'] }}</p>
 			</div>
 			<div class="col-xs-12 section_div_bottom_half darkblueBG padL40">
 				<h3>Orders Picked Today</h3>
-				<p class="bigText platinumText">{{ $orders_picked }}</p>
+				<p class="bigText platinumText">{{ $stats['orders_picked'] }}</p>
 			</div>
 		</div>
 	</div>

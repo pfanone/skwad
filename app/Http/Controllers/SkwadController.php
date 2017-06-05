@@ -21,10 +21,12 @@ class SkwadController extends BaseController
 {
 	public function index() {
 
-		$return_array = Skwad::getDailyStats();
+		$return_array = array();
 
-		$return_array['news'] = Skwad::getQuotes();
-		$return_array['gossip'] = Skwad::getGossip();
+		$return_array['stats']        = Skwad::getDailyStats();
+		$return_array['total_points'] = Skwad::getQuotes();
+		$return_array['news']         = Skwad::getQuotes();
+		$return_array['gossip']       = Skwad::getGossip();
 
 		return View::make("skwad.index", $return_array);
 	}

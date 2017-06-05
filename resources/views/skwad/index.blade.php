@@ -28,9 +28,34 @@
 		</div>
 	</div>
 	<div id="gossip_section" class="col-xs-12 col-sm-7 section_div">
-		@foreach($gossip as $key => $value)
-			@include('skwad.partials.gossip', $value)
-		@endforeach
+		<div class="bs-example" data-example-id="simple-carousel">
+			<div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+				@foreach($gossip as $key => $value)
+					<div class="item">
+						@include('skwad.partials.gossip', $value)
+					</div>
+					<div class="item">
+						<img alt="Second slide [900x500]" data-holder-rendered="true"> 
+					</div>
+					<div class="item active left">
+						<img alt="Third slide [900x500]" data-holder-rendered="true">
+					</div>
+				@endforeach
+				</div>
+				<a href="#carousel-example-generic" class="left carousel-control" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a href="#carousel-example-generic" class="right carousel-control" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('.carousel').carousel();
+		</script>
 	</div>
 </div>
 

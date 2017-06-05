@@ -9,7 +9,7 @@
 			<p class="marginT10 marginL10"><img src="{{ url('/images/skwad_logo_export.png') }}" height="102" width="136"></p>
 		</div>
 		<div class="col-xs-12 col-sm-3">
-			<h3>Total Points: {{ $total_points }}</h3>
+			<h2 class="marginT40">Total Points: {{ $total_points }}</h2>
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<div class="digital-clock">00:00:00</div>

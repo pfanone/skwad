@@ -5,11 +5,11 @@
 
 <div class="header_div blackBG">
 	<div class="row">
-		<div class="col-xs-12 col-sm-3">
+		<div class="col-xs-12 col-sm-6">
 			<p class="marginT10 marginL10"><img src="{{ url('/images/skwad_logo_export.png') }}" height="102" width="136"></p>
 		</div>
 		<div class="col-xs-12 col-sm-3">
-			<div>Total Points: {{ $total_points }}</div>
+			<h3>Total Points: {{ $total_points }}</h3>
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<div class="digital-clock">00:00:00</div>

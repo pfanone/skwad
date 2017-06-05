@@ -69,7 +69,7 @@ class Skwad {
 	/**
 	 *	Gossip
 	 */
-	public static function getQuotes() {
+	public static function getGossip() {
 
 		$return_array = array();
 

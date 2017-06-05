@@ -28,7 +28,14 @@
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-7 section_div">
-		<p class="pad20">Is Kitty Kibble Shortage A Hoax? Sims Search For Truth</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<img class="img-responsive" src="https://s3.amazonaws.com/inkboxdesigns/preview_image/Back(BottomMiddle)1_Thumb.jpg">
+			</div>
+			<div class="col-xs-12 col-sm-8">
+				<p class="pad20">Is Kitty Kibble Shortage A Hoax? Sims Search For Truth</p>
+			</div>
+		</div>
 	</div>
 </div>
 

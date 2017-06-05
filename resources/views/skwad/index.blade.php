@@ -27,16 +27,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-7 section_div">
-		<div class="row marginT20">
-			<div class="col-xs-12 col-sm-5">
-				<img class="img-responsive img-thumbnail" src="https://s3.amazonaws.com/inkboxdesigns/preview_image/Back(BottomMiddle)1_Thumb.jpg">
-			</div>
-			<div class="col-xs-12 col-sm-7">
-				<h2>Meet [ NAME ]!</h2>
-				<h3>Welcome to the Inkbox Family [ NAME ]!</h3>
-			</div>
-		</div>
+	<div id="gossip_section" class="col-xs-12 col-sm-7 section_div">
+		@foreach($gossip as $key => $value)
+			@include('skwad.partials.gossip', $value)
+		@endforeach
 	</div>
 </div>
 

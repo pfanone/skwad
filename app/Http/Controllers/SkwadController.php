@@ -24,6 +24,7 @@ class SkwadController extends BaseController
 		$return_array = Skwad::getDailyStats();
 
 		$return_array['news'] = Skwad::getQuotes();
+		$return_array['gossip'] = Skwad::getGossip();
 
 		return View::make("skwad.index", $return_array);
 	}

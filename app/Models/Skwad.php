@@ -65,4 +65,25 @@ class Skwad {
 
 		return $return_array;
 	}
+
+	/**
+	 *	Gossip
+	 */
+	public static function getQuotes() {
+
+		$return_array = array();
+
+		$get_quotes = DB::select("SELECT `title`, `description`, `image_url` FROM `skwad`.`gossip` ORDER BY `created_at` DESC", array());
+
+		foreach ($get_quotes as $key => $value) {
+			array_push($return_array, array(
+					'title'       => $value->title,
+					'description' => $value->description,
+					'image_url'   => $value->image_url
+				)
+			);
+		}
+
+		return $return_array;
+	}
 }

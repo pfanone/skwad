@@ -35,12 +35,6 @@
 					<div class="item">
 						@include('skwad.partials.gossip', $value)
 					</div>
-					<div class="item">
-						<img alt="Second slide [900x500]" data-holder-rendered="true"> 
-					</div>
-					<div class="item active left">
-						<img alt="Third slide [900x500]" data-holder-rendered="true">
-					</div>
 				@endforeach
 				</div>
 				<a href="#carousel-example-generic" class="left carousel-control" role="button" data-slide="prev">

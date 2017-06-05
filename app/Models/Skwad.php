@@ -17,6 +17,13 @@ use View;
 class Skwad {
 
 	/**
+	 *	Total Points
+	 */
+	public static function getTotalPoints() {
+		return 5000;
+	}
+
+	/**
 	 *	Daily Stats Function
 	 */
 	public static function getDailyStats() {

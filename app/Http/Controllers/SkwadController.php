@@ -24,7 +24,7 @@ class SkwadController extends BaseController
 		$return_array = array();
 
 		$return_array['stats']        = Skwad::getDailyStats();
-		$return_array['total_points'] = Skwad::getQuotes();
+		$return_array['total_points'] = Skwad::getTotalPoints();
 		$return_array['news']         = Skwad::getQuotes();
 		$return_array['gossip']       = Skwad::getGossip();
 

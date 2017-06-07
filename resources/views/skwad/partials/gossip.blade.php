@@ -7,7 +7,9 @@
 			<div class="col-xs-12">
 				<h1>{{ $title }}</h1>
 			</div>
-			<div class="col-xs-12">{!! $description !!}</div>
+			<div class="col-xs-12">
+				<h3>{!! $description !!}</h3>
+			</div>
 		</div>
 	</div>
 	<div class="col-xs-12 text-right"><p><em>Posted: {{ $posted_date }}</em></p></div>

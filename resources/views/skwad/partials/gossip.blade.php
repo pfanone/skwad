@@ -3,5 +3,5 @@
 		<img class="img-responsive img-thumbnail" src="{{ $image_url }}">
 	</div>
 	<div class="col-xs-12 col-sm-7">{!! $description !!}</div>
-	<div class="col-xs-12 text-right">Posted: {{ $posted_date }}</div>
+	<div class="col-xs-12 text-right"><p><em>Posted: {{ $posted_date }}</em></p></div>
 </div>

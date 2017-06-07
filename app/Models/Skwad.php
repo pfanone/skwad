@@ -46,6 +46,16 @@ class Skwad {
 	}
 
 	/**
+	 *	Daily Targets
+	 */
+	public static function getDailyTargets() {
+
+		$return_array = array('daily target');
+
+		return $return_array;
+	}
+
+	/**
 	 *	Quotes
 	 */
 	public static function getQuotes() {
@@ -91,6 +101,16 @@ class Skwad {
 				)
 			);
 		}
+
+		return $return_array;
+	}
+
+	/**
+	 *	Core Values
+	 */
+	public static function getCoreValues() {
+
+		$return_array = array('core values');
 
 		return $return_array;
 	}

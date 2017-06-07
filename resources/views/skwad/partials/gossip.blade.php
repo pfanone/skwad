@@ -9,5 +9,6 @@
 			</div>
 			<div class="col-xs-12">{!! $description !!}</div>
 		</div>
+	</div>
 	<div class="col-xs-12 text-right"><p><em>Posted: {{ $posted_date }}</em></p></div>
 </div>

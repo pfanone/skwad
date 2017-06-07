@@ -80,7 +80,7 @@ class Skwad {
 
 		$return_array = array();
 
-		$get_quotes = DB::select("SELECT `title`, `description`, `image_url`, DATE_FORMAT(`created_at`, '%Y-%m-%d') as `posted_date` FROM `skwad`.`gossip` ORDER BY `created_at` DESC", array());
+		$get_quotes = DB::select("SELECT `title`, `description`, `image_url`, DATE_FORMAT(`created_at`, '%Y-%m-%d') as `posted_date` FROM `skwad`.`gossip` WHERE `status` = 'active' ORDER BY `created_at` DESC", array());
 
 		foreach ($get_quotes as $key => $value) {
 			array_push($return_array, array(

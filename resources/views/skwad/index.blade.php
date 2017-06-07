@@ -20,12 +20,12 @@
 <div class="main_section row">
 	<div class="col-xs-12 col-sm-5 section_div">
 		<div class="row">
-			<div class="col-xs-12 section_div_top_half purpleBG padL40">
+			<div class="col-xs-12 section_div_top_half purpleBG pad30">
 			@foreach($core_values as $key => $value)
 				<p>{{ $value }}</p>
 			@endforeach
 			</div>
-			<div class="col-xs-12 section_div_bottom_half darkblueBG padL40">
+			<div class="col-xs-12 section_div_bottom_half darkblueBG pad30">
 			@foreach($daily_targets as $key => $value)
 				<p>{{ $value }}</p>
 			@endforeach

@@ -17,6 +17,7 @@
 	</div>
 </div>
 
+<div class="container-fluid">
 <div class="main_section row">
 	<div class="col-xs-12 col-sm-5 section_div">
 		<div class="row">
@@ -46,6 +47,7 @@
 			$('.carousel').carousel();
 		</script>
 	</div>
+</div>
 </div>
 
 <div class="footer_div blackBG">

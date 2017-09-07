@@ -1,8 +1,9 @@
 html { height: 100%; }
 
 body {
-	background-color: #E6E8E6;
-	overflow: hidden;
+	background-color: #f4f4f6;
+	/*overflow: hidden;*/
+	font-family: 'Aleo';
 }
 
 .redBG { background-color: #e74c3c; }
@@ -21,23 +22,76 @@ body {
 .blackoliveText { color: #393D3F; }
 .smokyBlackText { color: #131200; }
 
+.green-text { color: #62bbc1; }
+.purple-text { color: #af2bbf; }
+
 .header_div,
 .footer_div {
 	position: fixed;
 	left: 0px;
 
 	width: 100%;
-	height: 120px;
 
 	z-index: 100;
-}
-.header_div { top: 0px; }
-.footer_div { bottom: 0px; }
 
-.main_section { margin-top: 120px; }
-.section_div { height: 100vh; }
+	border-bottom: 1px #393d3f solid;
+}
+
+.header_div { 
+	top: 0px;
+	background-color: #f4f4f6;
+	height: 10rem;
+}
+.footer_div { 
+	bottom: 0px;
+	height: 5rem;
+}
+
+.main_section_container { 
+	margin-top: 10rem;
+	margin-bottom: 5rem;
+}
+
+.section_div { 
+	height: 300px;
+	float: left;
+}
 .section_div_top_half { height: 30vh; }
 .section_div_bottom_half { height: 80vh; }
+
+.section_div_header {
+	height: 75px;
+	width: 100%;
+}
+
+#sales_div > .section_div_header {
+	background-color: #393d3f;
+}
+
+.section_div_header > p {
+	font-size: 26px;
+	font-weight: bold;
+
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+#sales_div > .section_div_header > p {
+	color: #f4f4f6;
+}
+
+.section_div_body {
+	height: 225px;
+	background-color: #e6e8e6;
+
+	padding: 20px;
+}
+
+.section_div_body > .subheader {
+	font-size: 26px;
+	font-weight: bold;
+	color: #62bbc1;
+}
 
 .well.blueBG { border: 1px solid #05B2D2; }
 .well.darkgreenGB { border: 1px solid #1EBBA6; }
@@ -54,25 +108,28 @@ body {
 }
 
 @font-face {
-	font-family: 'DIGITAL';
-	/*src: url('https://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');*/
+	font-family: 'Aleo';
+	src: url('/fonts/Aleo-Regular.otf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Aleo';
+	src: url('/fonts/Aleo-Bold.otf');
+	font-weight: bold;
 }
 
 .digital-clock {
 	margin: auto;
-	margin-top: 20px;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	width: 200px;
 	height: 60px;
-	color: #ffffff;
+	color: #333;
 	padding: 3px;
 	border-radius: 4px;
 	text-align: center;
-	font: 45px/70px 'DIGITAL', Helvetica;
-	/*background: linear-gradient(180deg, #000, #555);*/
 }
 
 @-webkit-keyframes ticker {
@@ -103,7 +160,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 	height: 4rem;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: #131200;
 	padding-left: 100%;
 }
 
@@ -129,3 +186,70 @@ body {
 	color: white;
 }
 
+.point_text {
+	font-family: Aleo;
+	text-align: center;
+	color: #131200;
+}
+
+#rotisserie_section,
+#mission_section {
+	width: 389px;
+	background-color: #e6e8e6;
+	border-top: 1px solid #62bbc1;
+}
+
+#rotisserie_section {
+	margin-right: 20px;
+}
+
+#rotisserie_section > .section_div_header,
+#mission_section > .section_div_header {
+	background-color: #e6e8e6;
+}
+
+#rotisserie_section > .section_div_header > p,
+#mission_section > .section_div_header > p {
+	color: #62bbc1;
+}
+
+#gossip_section {
+	width: 798px;
+}
+
+#sales_div {
+	width: 299px;
+}
+
+.gossip_card {
+	background-color: #e6e8e6;
+	height: 300px;
+	min-height: 300px;
+
+	border-top: 1px solid #62bbc1;
+}
+
+.gossip_card_image {
+	width: 60%;
+	height: 300px;
+
+	float: left;
+}
+
+.gossip_card_sub {
+	background-color: #e6e8e6;
+
+	width: 40%;
+	height: 300px;
+
+	float: left;
+}
+
+.horizontal_divider {
+	height: 300px;
+
+	border-right: 1px solid #62bbc1;
+
+	margin-left: 20px;
+	margin-right: 20px;
+}

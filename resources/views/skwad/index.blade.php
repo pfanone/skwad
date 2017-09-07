@@ -3,59 +3,94 @@
 
 @section("content")
 
-<div class="header_div blackBG">
-	<div class="row">
-		<div class="col-xs-12 col-sm-3">
-			<div class="digital-clock">00:00:00</div>
+<div class="header_div">
+	<div class="row marginT10 text-center">
+		<div class="col-xs-12 col-sm-3 col-md-4 marginT20">
+			<h3><span class="digital-clock">00:00:00</span> {{ date('l jS, F') }}</h3>
 		</div>
 
-		<div class="col-xs-12 col-sm-6">
-			<p class="marginT10 marginL10"><img src="{{ url('/images/skwad_logo.png') }}" height="102" width="136"></p>
+		<div class="col-xs-12 col-sm-6 col-md-2 col-md-offset-1">
+			<img src="{{ url('/images/skwad_logo.png') }}" class="img-responsive marginT20">
 		</div>
-		
-		<div class="col-xs-12 col-sm-3">
-			<h2 class="marginT40">Total Points: {{ $total_points }}</h2>
+
+		<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-2 marginT20">
+			<h3 class="point_text"><strong>{{ $total_points }}</strong> Points</h3>
 		</div>
 		
 	</div>
 </div>
 
-<div class="container-fluid">
-<div class="main_section row">
-	<div class="col-xs-12 col-sm-5 section_div">
-		<div class="row">
-			<div class="col-xs-12 section_div_top_half purpleBG">
-			@foreach($core_values as $key => $value)
-				<p>{{ $value }}</p>
-			@endforeach
-			</div>
-			<div class="col-xs-12 section_div_bottom_half darkblueBG">
-			@foreach($daily_targets as $key => $value)
-				<p>{{ $value }}</p>
-			@endforeach
-			</div>
-		</div>
-	</div>
-	<div id="gossip_section" class="col-xs-12 col-sm-7 section_div">
-		<div class="carousel slide" id="gossip_carousel-generic" data-ride="carousel">
-			<div class="carousel-inner" role="listbox">
-			@foreach($gossip as $key => $value)
-				<div class="item @if($key == 0) active @endif">
-					@include('skwad.partials.gossip', $value)
+<div class="container main_section_container">
+	<div class="main_section row">
+		<div class="col-xs-12">
+			<div id="gossip_section" class="section_div">
+				<div class="carousel slide" id="gossip_carousel-generic" data-ride="carousel">
+					<div class="carousel-inner" role="listbox">
+					@foreach($gossip as $key => $value)
+						@if($key == 0)
+						<div class="item active">
+						@else
+						<div class="item">
+						@endif
+							@include('skwad.partials.gossip', $value)
+						</div>
+					@endforeach
+					</div>
 				</div>
-			@endforeach
+				<script type="text/javascript">
+					$('.carousel').carousel();
+				</script>
+			</div>
+			
+			<div class="section_div horizontal_divider marginT20">&nbsp;</div>
+
+			<div id="sales_div" class="section_div marginT20">
+				<div class="section_div_header">
+					<p>Sales</p>
+				</div>
+				<div class="section_div_body">
+					<p class="subheader">Today</p>
+					<h1 class="purple-text text-center"><strong>{{ $stats['sales_today'] }}</strong></h1>
+				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			$('.carousel').carousel();
-		</script>
+	</div>
+	<div class="main_section row marginT20">
+		<div class="col-xs-12">
+			<div id="rotisserie_section" class="section_div">
+				<div class="section_div_header">
+					<p>Rotisserie</p>
+				</div>
+				<div class="section_div_body">
+					<p>This is an example of a mission statement</p>
+				</div>
+			</div>
+
+			<div id="mission_section" class="section_div">
+				<div class="section_div_header">
+					<p>Mission</p>
+				</div>
+				<div class="section_div_body">
+					<p>This is an example of a mission statement</p>
+				</div>
+			</div>
+
+			<div class="section_div horizontal_divider">&nbsp;</div>
+
+			<div id="sales_div" class="section_div">
+				<div class="section_div_header">
+					<p>Orders Picked</p>
+				</div>
+				<div class="section_div_body">
+					<p class="subheader">Today</p>
+					<h1 class="purple-text text-center"><strong>{{ $stats['orders_picked'] }}</strong></h1>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-</div>
 
-<div class="footer_div blackBG">
-	<p class="pad20">Unsalted Tortilla Chips Best Cure For Colds Says Health Nut</p>
-	
+<div class="footer_div">
 	<div class="ticker-wrap">
 		<div class="ticker">
 			@foreach($news as $key => $news_item)
@@ -73,24 +108,16 @@ $(document).ready(function() {
 
 function clockUpdate() {
 	var date = new Date();
-	// $('.digital-clock').css({'color': '#fff', 'text-shadow': '0 0 6px #62BBC1'});
 
 	function addZero(x) {
-		if (x < 10) {
-			return x = '0' + x;
-		} else {
-			return x;
-		}
+		if (x < 10) return x = '0' + x;
+		else return x;
 	}
 
 	function twelveHour(x) {
-		if (x > 12) {
-			return x = x - 12;
-		} else if (x == 0) {
-			return x = 12;
-		} else {
-			return x;
-		}
+		if (x > 12) return x = x - 12;
+		else if (x == 0) return x = 12;
+		else return x;
 	}
 
 	var h = addZero(twelveHour(date.getHours()));

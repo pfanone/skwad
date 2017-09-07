@@ -20,7 +20,7 @@ class Skwad {
 	 *	Total Points
 	 */
 	public static function getTotalPoints() {
-		return 5000;
+		return 'TBD';
 	}
 
 	/**
@@ -90,14 +90,15 @@ class Skwad {
 
 		$return_array = array();
 
-		$get_quotes = DB::select("SELECT `title`, `description`, `image_url`, DATE_FORMAT(`created_at`, '%Y-%m-%d') as `posted_date` FROM `skwad`.`gossip` WHERE `status` = 'active' ORDER BY `created_at` DESC", array());
+		$get_quotes = DB::select("SELECT `title`, `description`, `image_url`, `type`, DATE_FORMAT(`created_at`, '%Y-%m-%d') as `posted_date` FROM `skwad`.`gossip` WHERE `status` = 'active' ORDER BY `created_at` DESC", array());
 
 		foreach ($get_quotes as $key => $value) {
 			array_push($return_array, array(
 					'title'       => $value->title,
 					'description' => $value->description,
 					'image_url'   => $value->image_url,
-					'posted_date' => $value->posted_date
+					'posted_date' => $value->posted_date,
+					'type'        => $value->type,
 				)
 			);
 		}

@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2>Admin</h2>
+			<h2>SKWAD CMS</h2>
 		</div>
 		<div class="col-xs-12">
 			<form role="form" method="POST" action="{{ url('/admin') }}">
@@ -17,6 +17,9 @@
 							<option value='rotisserie'>Rotisserie</option>
 							<option value='mission'>Mission</option>
 						</select>
+					</div>
+					<div class="col-xs-12">
+						<button type="submit">Submit</button>
 					</div>
 				</div>
 			</form>

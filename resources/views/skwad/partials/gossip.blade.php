@@ -5,7 +5,7 @@
 				<h3><span class="green-text"><strong>{{ ucwords($type) }}</strong></span>&nbsp;/&nbsp;&nbsp;{{ $title }}</h3>
 			</div>
 			<div class="col-xs-12">
-				<h5>{!! $description !!}</h3>
+				<h4>{!! $description !!}</h4>
 			</div>
 			<div class="col-xs-12 text-right">
 				<p><em>Posted: {{ $posted_date }}</em></p>

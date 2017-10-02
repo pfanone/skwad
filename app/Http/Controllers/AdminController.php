@@ -37,7 +37,7 @@ class AdminController extends BaseController
 			$filePath = '/skwad/items/' . $imageFileName;
 			$s3->put($filePath, file_get_contents($upload), 'public');
 
-			$item_image = "https://s3.amazonaws.com/inkboxdesigns/" . $filePath;
+			$item_image = "https://s3.amazonaws.com/inkboxdesigns" . $filePath;
 		}
 
 		$item_type        = $request->input('item_type');

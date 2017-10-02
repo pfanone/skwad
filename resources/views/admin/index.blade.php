@@ -42,7 +42,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<h2>Current Acitve Items</h2>
+			<h2>Current Active Items</h2>
 		</div>
 		@foreach($current_items as $ci_key => $ci_val)
 		<div class="col-xs-12">

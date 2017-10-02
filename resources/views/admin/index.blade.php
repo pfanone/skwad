@@ -40,6 +40,26 @@
 			</form>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table">
+				<thead>
+					<th>Type</th>
+					<th>Title</th>
+					<th>Remove</th>
+				</thead>
+				<tbody>
+					@foreach($current_items as $key => $value)
+						<tr>
+							<td>{{ $value['type'] }}</td>
+							<td>{{ $value['title'] }}</td>
+							<td><button>delete</button></td>
+						</tr>
+					@endforeach
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 
 @endsection

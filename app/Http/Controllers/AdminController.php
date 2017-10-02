@@ -23,6 +23,8 @@ class AdminController extends BaseController
 
 		$return_array = array();
 
+		$return_array['current_items'] = Skwad::getGossip();
+
 		return View::make("admin.index", $return_array);
 	}
 

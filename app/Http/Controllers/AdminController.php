@@ -28,6 +28,7 @@ class AdminController extends BaseController
 
 	public function store(Request $request) {
 
+		dd($request->all());
 		$item_type        = $request->input('item_type');
 		$item_title       = $request->input('item_title');
 		$item_description = $request->input('item_description');

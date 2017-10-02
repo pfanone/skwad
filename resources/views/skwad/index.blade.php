@@ -24,9 +24,9 @@
 	<div class="main_section row">
 		<div class="col-xs-12">
 			<div id="gossip_section" class="section_div">
-				<div class="carousel slide" id="gossip_carousel-generic" data-ride="carousel">
+				<div class="carousel slide" id="gossip_carousel_generic" data-ride="carousel">
 					<div class="carousel-inner" role="listbox">
-					@foreach($gossip as $key => $value)
+					@foreach($gossip['gossip'] as $key => $value)
 						@if($key == 0)
 						<div class="item active">
 						@else
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<script type="text/javascript">
-					$('.carousel').carousel();
+					$('#gossip_carousel_generic').carousel();
 				</script>
 			</div>
 			
@@ -62,7 +62,22 @@
 					<p>Rotisserie</p>
 				</div>
 				<div class="section_div_body">
-					<p>This is an example of a mission statement</p>
+					<div class="carousel slide" id="rotisserie_carousel_generic" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+						@foreach($gossip['rotisserie'] as $key => $value)
+							@if($key == 0)
+							<div class="item active">
+							@else
+							<div class="item">
+							@endif
+								@include('skwad.partials.gossip', $value)
+							</div>
+						@endforeach
+						</div>
+					</div>
+					<script type="text/javascript">
+						$('#rotisserie_carousel_generic').carousel();
+					</script>
 				</div>
 			</div>
 
@@ -71,7 +86,22 @@
 					<p>Mission</p>
 				</div>
 				<div class="section_div_body">
-					<p>This is an example of a mission statement</p>
+					<div class="carousel slide" id="mission_carousel_generic" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+						@foreach($gossip['gossip'] as $key => $value)
+							@if($key == 0)
+							<div class="item active">
+							@else
+							<div class="item">
+							@endif
+								@include('skwad.partials.gossip', $value)
+							</div>
+						@endforeach
+						</div>
+					</div>
+					<script type="text/javascript">
+						$('#mission_carousel_generic').carousel();
+					</script>
 				</div>
 			</div>
 

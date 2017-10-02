@@ -21,15 +21,15 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="item_header">Title</label>
-					<input type="text" name="item_header" class="form-control">
+					<label for="item_title">Title</label>
+					<input type="text" name="item_title" class="form-control">
 				</div>
 				<div class="form-group">
 					<label for="item_description">Description</label>
 					<textarea name="item_description" class="form-control"></textarea>
 				</div>
 				<div class="form-group">
-					<label for="upload_item_image" >Upload a screenshot</label>
+					<label for="upload_item_image">Upload a screenshot</label>
 					<label class="btn btn-block btn-file marginT10">
 						<input name='upload_item_image' type="file" accept=".png,.jpg,.jpeg" />
 					</label>

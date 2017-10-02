@@ -28,12 +28,21 @@ class AdminController extends BaseController
 
 	public function store(Request $request) {
 
-		if (null !== $request->file('upload_bug_image')) {
-			$upload = $request->file('upload_bug_image')->store('reported_bug', 's3', 'public');
+		$item_type        = $request->input('item_type');
+		$item_title       = $request->input('item_title');
+		$item_description = $request->input('item_description');
+		$item_image       = 'https://s3.amazonaws.com/inkboxdesigns/logo/logo_smokey.svg';
 
-			$data_array['previewURL'] = "https://s3.amazonaws.com/inkboxdesigns/" . $upload;
+		if (null !== $request->file('upload_bug_image')) {
+			$upload = $request->file('upload_bug_image')->store('skwad/items', 's3', 'public');
+
+			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
 		}
-		
-		dd($request->all());
+
+		$insert = DB::insert("INSERT INTO `gossip` (`type`, `title`, `description`, `image_url`) VALUES (?,?,?,?)", array($item_type, $item_title, $item_description, $item_image));
+
+		Session::flash("status_success", "Item successfully added!");
+
+		return back();
 	}
 }

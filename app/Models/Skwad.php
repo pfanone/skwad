@@ -93,7 +93,12 @@ class Skwad {
 		$get_quotes = DB::select("SELECT `title`, `description`, `image_url`, `type`, DATE_FORMAT(`created_at`, '%Y-%m-%d') as `posted_date` FROM `skwad`.`gossip` WHERE `status` = 'active' ORDER BY `created_at` DESC", array());
 
 		foreach ($get_quotes as $key => $value) {
-			array_push($return_array, array(
+			$item_type = $value->type;
+			if ($item_type == 'news' || $item_type == 'event') $item_type = 'gossip';
+
+			if (!isset($return_array[$item_type])) $return_array[$item_type] = array();
+
+			array_push($return_array[$item_type], array(
 					'title'       => $value->title,
 					'description' => $value->description,
 					'image_url'   => $value->image_url,

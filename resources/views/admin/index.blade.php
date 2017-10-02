@@ -1,4 +1,4 @@
-@extends('layouts/admin')
+@extends('layouts/skwad')
 @section('title', 'Admin')
 
 @section("content")

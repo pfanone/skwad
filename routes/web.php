@@ -17,7 +17,11 @@ Route::group(['middleware' => ['auth']], function () {
 	
 });
 
+Route::group(['middleware' => ['auth'. 'admin']], function () {
+
+	Route::resource('admin', 'AdminController');
+	
+});
+
 // Auth Routes
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -1,5 +1,5 @@
 @extends('layouts/skwad')
-@section('title', '-')
+@section('title', 'Dashboard')
 
 @section("content")
 

@@ -41,6 +41,9 @@
 		</div>
 	</div>
 	<div class="row">
+		<div class="col-xs-12">
+			<h2>Current Acitve Items</h2>
+		</div>
 		@foreach($current_items as $ci_key => $ci_val)
 		<div class="col-xs-12">
 			<table class="table">
@@ -54,7 +57,7 @@
 						<tr>
 							<td>{{ $value['type'] }}</td>
 							<td>{{ $value['title'] }}</td>
-							<td><button>delete</button></td>
+							<td><a href="/admin/delete/{{ $value['item_id'] }}" class="btn btn-default">remove</button></td>
 						</tr>
 					@endforeach
 				</tbody>

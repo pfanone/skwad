@@ -19,6 +19,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
+
+	Route::post('admin/delete/{id}', 'AdminController@delete');
 	Route::resource('admin', 'AdminController');
 	
 });

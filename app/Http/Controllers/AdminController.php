@@ -52,4 +52,9 @@ class AdminController extends BaseController
 
 		return back();
 	}
+
+	public function delete($item_id) {
+		$update = DB::update("UPDATE `skwad`.`gossip` SET `status` = 'inactive' WHERE `id` = ? LIMIT 1", array($item_id));
+		return back();
+	}
 }

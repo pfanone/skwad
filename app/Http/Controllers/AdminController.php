@@ -31,10 +31,13 @@ class AdminController extends BaseController
 		$item_image = 'https://s3.amazonaws.com/inkboxdesigns/logo/logo_smokey.svg';
 
 		if (null !== $request->file('upload_item_image')) {
-			$upload = $request->file('upload_item_image')->store('skwad/items', 's3', 'public');
-			\Storage::setVisibility($upload, 'public');
+			$upload = $request->file('upload_item_image');
+			$imageFileName = time() . '.' . $upload->getClientOriginalExtension();
+			$s3 = \Storage::disk('s3');
+			$filePath = '/skwad/items/' . $imageFileName;
+			$s3->put($filePath, file_get_contents($upload), 'public');
 
-			$item_image = "https://s3.amazonaws.com/inkboxdesigns/" . $upload;
+			$item_image = "https://s3.amazonaws.com/inkboxdesigns/" . $filePath;
 		}
 
 		$item_type        = $request->input('item_type');

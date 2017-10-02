@@ -46,6 +46,9 @@
 		</div>
 		@foreach($current_items as $ci_key => $ci_val)
 		<div class="col-xs-12">
+			<h3>{{ $ci_key }} Section</h3>
+		</div>
+		<div class="col-xs-12">
 			<table class="table">
 				<thead>
 					<th>Type</th>

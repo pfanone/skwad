@@ -55,6 +55,7 @@ class AdminController extends BaseController
 
 	public function delete($item_id) {
 		$update = DB::update("UPDATE `skwad`.`gossip` SET `status` = 'inactive' WHERE `id` = ? LIMIT 1", array($item_id));
+		Session::flash("status_success", "Item successfully removed!");
 		return back();
 	}
 }

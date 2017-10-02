@@ -73,7 +73,7 @@
 							@else
 							<div class="item">
 							@endif
-								@include('skwad.partials.gossip', $value)
+								@include('skwad.partials.rotisserie', $value)
 							</div>
 						@endforeach
 						@endif
@@ -99,7 +99,7 @@
 							@else
 							<div class="item">
 							@endif
-								@include('skwad.partials.gossip', $value)
+								@include('skwad.partials.mission', $value)
 							</div>
 						@endforeach
 						@endif

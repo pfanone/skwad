@@ -31,7 +31,7 @@
 				<div class="form-group">
 					<label for="upload_item_image">Upload a screenshot</label>
 					<label class="btn btn-block btn-file marginT10">
-						<input name='upload_item_image' type="file" accept=".png,.jpg,.jpeg" />
+						<input name='upload_item_image' type="file" accept=".png,.jpg,.jpeg,.gif" />
 					</label>
 				</div>
 				<div class="form-group">

@@ -33,8 +33,8 @@ class AdminController extends BaseController
 		$item_description = $request->input('item_description');
 		$item_image       = 'https://s3.amazonaws.com/inkboxdesigns/logo/logo_smokey.svg';
 
-		if (null !== $request->file('upload_bug_image')) {
-			$upload = $request->file('upload_bug_image')->store('skwad/items', 's3', 'public');
+		if (null !== $request->file('upload_item_image')) {
+			$upload = $request->file('upload_item_image')->store('skwad/items', 's3', 'public');
 
 			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
 		}

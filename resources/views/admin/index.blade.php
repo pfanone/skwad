@@ -41,6 +41,7 @@
 		</div>
 	</div>
 	<div class="row">
+		@foreach($current_items as $ci_key => $ci_val)
 		<div class="col-xs-12">
 			<table class="table">
 				<thead>
@@ -49,7 +50,7 @@
 					<th>Remove</th>
 				</thead>
 				<tbody>
-					@foreach($current_items as $key => $value)
+					@foreach($ci_val as $key => $value)
 						<tr>
 							<td>{{ $value['type'] }}</td>
 							<td>{{ $value['title'] }}</td>
@@ -59,6 +60,7 @@
 				</tbody>
 			</table>
 		</div>
+		@endforeach
 	</div>
 </div>
 

@@ -33,7 +33,7 @@ class AdminController extends BaseController
 		if (null !== $request->file('upload_item_image')) {
 			$upload = $request->file('upload_item_image')->store('skwad/items', 's3', 'public');
 
-			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
+			$item_image = "https://s3.amazonaws.com/inkboxdesigns/" . $upload;
 		}
 
 		$item_type        = $request->input('item_type');

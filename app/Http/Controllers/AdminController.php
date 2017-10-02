@@ -28,6 +28,12 @@ class AdminController extends BaseController
 
 	public function store(Request $request) {
 
+		if (null !== $request->file('upload_bug_image')) {
+			$upload = $request->file('upload_bug_image')->store('reported_bug', 's3', 'public');
+
+			$data_array['previewURL'] = "https://s3.amazonaws.com/inkboxdesigns/" . $upload;
+		}
+		
 		dd($request->all());
 	}
 }

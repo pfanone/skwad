@@ -28,16 +28,17 @@ class AdminController extends BaseController
 
 	public function store(Request $request) {
 
-		$item_type        = $request->input('item_type');
-		$item_title       = $request->input('item_title');
-		$item_description = $request->input('item_description');
-		$item_image       = 'https://s3.amazonaws.com/inkboxdesigns/logo/logo_smokey.svg';
+		$item_image = 'https://s3.amazonaws.com/inkboxdesigns/logo/logo_smokey.svg';
 
 		if (null !== $request->file('upload_item_image')) {
 			$upload = $request->file('upload_item_image')->store('skwad/items', 's3', 'public');
 
 			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
 		}
+
+		$item_type        = $request->input('item_type');
+		$item_title       = $request->input('item_title');
+		$item_description = $request->input('item_description');
 
 		$insert = DB::insert("INSERT INTO `skwad`.`gossip` (`type`, `title`, `description`, `image_url`) VALUES (?,?,?,?)", array($item_type, $item_title, $item_description, $item_image));
 

@@ -32,6 +32,7 @@ class AdminController extends BaseController
 
 		if (null !== $request->file('upload_item_image')) {
 			$upload = $request->file('upload_item_image')->store('skwad/items', 's3', 'public');
+			\Storage::setVisibility($upload, 'public');
 
 			$item_image = "https://s3.amazonaws.com/inkboxdesigns/" . $upload;
 		}

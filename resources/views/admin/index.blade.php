@@ -19,6 +19,8 @@
 							<option value='mission'>Mission</option>
 						</select>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-xs-12">
 						<button type="submit">Submit</button>
 					</div>

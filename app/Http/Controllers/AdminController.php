@@ -28,6 +28,6 @@ class AdminController extends BaseController
 
 	public function store(Request $request) {
 
-		dd($request);
+		dd($request->all());
 	}
 }

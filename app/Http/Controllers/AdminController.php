@@ -39,7 +39,7 @@ class AdminController extends BaseController
 			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
 		}
 
-		$insert = DB::insert("INSERT INTO `gossip` (`type`, `title`, `description`, `image_url`) VALUES (?,?,?,?)", array($item_type, $item_title, $item_description, $item_image));
+		$insert = DB::insert("INSERT INTO `skwad`.`gossip` (`type`, `title`, `description`, `image_url`) VALUES (?,?,?,?)", array($item_type, $item_title, $item_description, $item_image));
 
 		Session::flash("status_success", "Item successfully added!");
 

@@ -10,6 +10,7 @@
 		</div>
 		<div class="col-xs-12">
 			<form role="form" method="POST" action="{{ url('/admin') }}">
+				{{ csrf_field() }}
 				<div class="row">
 					<div class="col-xs-12">
 						<select name="item_type">

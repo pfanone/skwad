@@ -35,11 +35,6 @@ class AdminController extends BaseController
 
 			$item_image = "https://s3.amazonaws.com/inkboxdesigns/skwad/items/" . $upload;
 		}
-		else {
-			dd($request->file('upload_item_image'));
-		}
-
-		Log::info('item_image - '.$item_image);
 
 		$item_type        = $request->input('item_type');
 		$item_title       = $request->input('item_title');

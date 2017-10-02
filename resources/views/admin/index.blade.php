@@ -9,7 +9,7 @@
 			<h2>SKWAD CMS</h2>
 		</div>
 		<div class="col-xs-12">
-			<form role="form" method="POST" action="{{ url('/admin') }}">
+			<form role="form" method="POST" action="{{ url('/admin') }}" enctype="multipart/form-data">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="item_type">Type</label>

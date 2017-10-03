@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				<script type="text/javascript">
-					$('#gossip_carousel_generic').carousel();
+					$('#gossip_carousel_generic').carousel({interval: 1000 * 10});
 				</script>
 			</div>
 			
@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<script type="text/javascript">
-						$('#rotisserie_carousel_generic').carousel();
+						$('#rotisserie_carousel_generic').carousel({interval: 1000 * 10});
 					</script>
 				</div>
 			</div>
@@ -106,7 +106,7 @@
 						</div>
 					</div>
 					<script type="text/javascript">
-						$('#mission_carousel_generic').carousel();
+						$('#mission_carousel_generic').carousel({interval: 1000 * 10});
 					</script>
 				</div>
 			</div>

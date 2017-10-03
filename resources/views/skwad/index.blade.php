@@ -63,7 +63,7 @@
 				<div class="section_div_header">
 					<p>Rotisserie</p>
 				</div>
-				<div class="section_div_body">
+				<div class="section_div_body" style="padding-top: 0px;">
 					<div class="carousel slide" id="rotisserie_carousel_generic" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">
 						@if (isset($gossip['rotisserie']))

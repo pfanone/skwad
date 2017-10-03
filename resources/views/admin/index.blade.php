@@ -22,7 +22,7 @@
 				</div>
 				<div class="form-group">
 					<label for="item_title">Title</label>
-					<input type="text" name="item_title" class="form-control">
+					<input type="text" name="item_title" class="form-control" required="required">
 				</div>
 				<div class="form-group">
 					<label for="item_description">Description</label>

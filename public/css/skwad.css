@@ -253,3 +253,9 @@ body {
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
+@media (max-width: 768px) {
+	.header_div, .footer_div {
+		position: relative;
+	}
+}

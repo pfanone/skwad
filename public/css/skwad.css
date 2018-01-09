@@ -258,4 +258,12 @@ body {
 	.header_div, .footer_div {
 		position: relative;
 	}
+
+	#gossip_section {
+		width: 100%;
+	}
+
+	.section_div {
+		height: auto;
+	}
 }

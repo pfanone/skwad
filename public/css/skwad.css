@@ -260,7 +260,10 @@ body {
 		border: none;
 	}
 
-	#gossip_section, #sales_div {
+	#gossip_section,
+	#sales_div,
+	#rotisserie_section,
+	#mission_section {
 		width: 100%;
 	}
 

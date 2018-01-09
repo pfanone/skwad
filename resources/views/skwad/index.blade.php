@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="col-xs-12 col-sm-6 col-md-2 col-md-offset-1">
-			<img src="{{ url('/images/skwad_logo.png') }}" class="img-responsive marginT20">
+			<img src="{{ url('/images/skwad_logo.png') }}" class="skwad-logo img-responsive marginT20">
 		</div>
 
 		<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-2 marginT20">

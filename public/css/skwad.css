@@ -257,6 +257,7 @@ body {
 @media (max-width: 768px) {
 	.header_div, .footer_div {
 		position: relative;
+		border: none;
 	}
 
 	#gossip_section, #sales_div {
@@ -274,5 +275,9 @@ body {
 
 	.horizontal_divider {
 		display: none;
+	}
+
+	.img_responsive {
+		padding: 20px 30px 0px;
 	}
 }

@@ -259,15 +259,20 @@ body {
 		position: relative;
 	}
 
-	#gossip_section {
+	#gossip_section, #sales_div {
 		width: 100%;
 	}
 
 	.section_div {
 		height: auto;
+		margin-bottom: 10px;
 	}
 
 	.gossip_card_sub, .gossip_card_image {
 		width: 100%;
+	}
+
+	.horizontal_divider {
+		display: none;
 	}
 }

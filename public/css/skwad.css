@@ -266,4 +266,8 @@ body {
 	.section_div {
 		height: auto;
 	}
+
+	.gossip_card_sub, .gossip_card_image {
+		width: 100%;
+	}
 }

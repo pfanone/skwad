@@ -14,6 +14,7 @@
 Route::group(['middleware' => ['auth']], function () {
 
 	Route::resource('/', 'SkwadController');
+	Route::any('events', 'SkwadController@anyEvents');
 	
 });
 

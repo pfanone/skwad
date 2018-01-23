@@ -3,23 +3,6 @@
 
 @section("content")
 
-<div class="header_div">
-	<div class="row marginT10 text-center">
-		<div class="col-xs-12 col-sm-3 col-md-4 marginT20">
-			<h3><span class="digital-clock">00:00:00</span> {{ date('l jS, F') }}</h3>
-		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-2 col-md-offset-1">
-			<img src="{{ url('/images/skwad_logo.png') }}" class="skwad-logo img-responsive marginT20">
-		</div>
-
-		<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-2 marginT20">
-			<h3 class="point_text"><strong>{{ $total_points or 'TBD' }}</strong> Points</h3>
-		</div>
-		
-	</div>
-</div>
-
 <div class="container main_section_container">
 	<div class="main_section row">
 		<div class="col-xs-12">
@@ -126,43 +109,5 @@
 		</div>
 	</div>
 </div>
-
-<div class="footer_div">
-	<div class="ticker-wrap">
-		<div class="ticker">
-			@foreach($news as $key => $news_item)
-			<div class="ticker__item">{{ $news_item }}</div>
-			@endforeach
-		</div>
-	</div>	
-</div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	clockUpdate();
-	setInterval(clockUpdate, 1000);
-})
-
-function clockUpdate() {
-	var date = new Date();
-
-	function addZero(x) {
-		if (x < 10) return x = '0' + x;
-		else return x;
-	}
-
-	function twelveHour(x) {
-		if (x > 12) return x = x - 12;
-		else if (x == 0) return x = 12;
-		else return x;
-	}
-
-	var h = addZero(twelveHour(date.getHours()));
-	var m = addZero(date.getMinutes());
-	var s = addZero(date.getSeconds());
-
-	$('.digital-clock').text(h + ':' + m + ':' + s);
-}
-</script>
 
 @endsection

@@ -32,4 +32,12 @@ class SkwadController extends BaseController
 
 		return View::make("skwad.index", $return_array);
 	}
+
+	public function anyEvents() {
+		$return_array = array();
+
+		$return_array['events'] = Skwad::getGossip();
+
+		return View::make("skwad.events", $return_array);
+	}
 }

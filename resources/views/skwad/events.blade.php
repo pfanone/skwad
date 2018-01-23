@@ -3,7 +3,7 @@
 
 @section("content")
 
-<div class="contianer">
+<div class="container">
 	<div class="row"> 
 		@if (isset($gossip['gossip']))
 		@foreach($gossip['gossip'] as $key => $value)

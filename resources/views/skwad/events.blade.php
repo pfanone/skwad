@@ -4,7 +4,12 @@
 @section("content")
 
 <div class="container">
-	<div class="row"> 
+	<div class="row">
+
+		<div class="col-xs-12">
+			<h3>Events</h3>
+		</div>
+
 		@if (isset($events['gossip']))
 			@foreach($events['gossip'] as $key => $value)
 				<div class="col-xs-12">

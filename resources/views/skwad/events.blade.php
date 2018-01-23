@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-2 marginT20">
-			<h3 class="point_text"><strong>{{ $total_points }}</strong> Points</h3>
+			<h3 class="point_text"><strong>{{ $total_points or 'TBD' }}</strong> Points</h3>
 		</div>
 		
 	</div>

@@ -49,10 +49,11 @@
 			
 		</div>
 	</div>
-	
+
 	@include('home.status')
 	@yield('content')
 
+	@if (isset($news))
 	<div class="footer_div">
 		<div class="ticker-wrap">
 			<div class="ticker">
@@ -62,6 +63,7 @@
 			</div>
 		</div>	
 	</div>
+	@endif
 
 	<script type="text/javascript">
 		$(document).ready(function() {

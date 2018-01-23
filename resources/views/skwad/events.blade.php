@@ -6,8 +6,12 @@
 <div class="container">
 	<div class="row">
 
-		<div class="col-xs-12">
-			<h3>Events</h3>
+		<div class="col-xs-12 pull-right">
+			<p><a href="/">Main</a></p>
+		</div>
+
+		<div class="col-xs-12 text-center">
+			<h1>Events</h1>
 		</div>
 
 		@if (isset($events['gossip']))

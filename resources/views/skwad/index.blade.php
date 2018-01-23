@@ -39,7 +39,7 @@
 					@endif
 					</div>
 				</div>
-				<p><a href="/events">View All</a></p>
+				<p style="position: absolute;bottom: 0px;left: 40px;"><a href="/events">View All Updates</a></p>
 				<script type="text/javascript">
 					$('#gossip_carousel_generic').carousel({interval: 1000 * 10});
 				</script>

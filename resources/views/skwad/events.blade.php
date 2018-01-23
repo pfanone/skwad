@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="col-xs-12 text-center">
-			<h1>Events</h1>
+			<h1>Updates</h1>
 		</div>
 
 		@if (isset($events['gossip']))
